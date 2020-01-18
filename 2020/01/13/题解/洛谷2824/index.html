@@ -367,17 +367,22 @@
           </div>
 
         
+  <div class="post-widgets">
+    <div class="wp_rating">
+      <div id="wpac-rating"></div>
+    </div>
+  </div>
 
 
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/01/13/%E9%A2%98%E8%A7%A3/CF903G/" rel="prev" title="题解 CF903G Yet Another Maxflow Problem">
-      <i class="fa fa-chevron-left"></i> 题解 CF903G Yet Another Maxflow Problem
+    <a href="/2020/01/06/%E5%AD%A6%E7%A7%91/%E6%94%BF%E6%B2%BB%E5%BF%85%E4%BF%AE%E4%B8%80%E5%A4%8D%E4%B9%A0/" rel="prev" title="政治必修一复习(问答题)">
+      <i class="fa fa-chevron-left"></i> 政治必修一复习(问答题)
     </a></div>
       <div class="post-nav-item">
-    <a href="/2020/01/14/%E9%A2%98%E8%A7%A3/CF343E/" rel="next" title="题解 CF343E Pumping Stations">
-      题解 CF343E Pumping Stations <i class="fa fa-chevron-right"></i>
+    <a href="/2020/01/13/%E9%A2%98%E8%A7%A3/AT1983/" rel="next" title="题解 AT1983 BBQ Hard">
+      题解 AT1983 BBQ Hard <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -651,6 +656,26 @@ window.addEventListener('pjax:success', () => {
 
 
 
+  <script pjax>
+  if (CONFIG.page.isPost) {
+    wpac_init = window.wpac_init || [];
+    wpac_init.push({
+      widget: 'Rating',
+      id: ,
+      el: 'wpac-rating',
+      color: 'fc6423'
+    });
+    (function() {
+      if ('WIDGETPACK_LOADED' in window) return;
+      WIDGETPACK_LOADED = true;
+      var mc = document.createElement('script');
+      mc.type = 'text/javascript';
+      mc.async = true;
+      mc.src = '//embed.widgetpack.com/widget.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(mc, s.nextSibling);
+    })();
+  }
+  </script>
 
   
 <script src="/js/local-search.js"></script>
