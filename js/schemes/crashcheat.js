@@ -1,7 +1,8 @@
 <!--崩溃欺骗-->
 var OriginTitle = document.title;
 var titleTime;
-document.addEventListener('visibilitychange', function () {
+document.addEventListener(
+'visibilitychange', function () {
     if (document.hidden) {
         $('[rel="icon"]').attr('href', "/img/2.jpg");
         document.title = '?';
