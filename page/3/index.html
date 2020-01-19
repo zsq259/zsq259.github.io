@@ -23,7 +23,7 @@
   var CONFIG = {
     hostname: new URL('http://yoursite.com').hostname,
     root: '/',
-    scheme: 'Gemini',
+    scheme: 'Mist',
     version: '7.7.0',
     exturl: false,
     sidebar: {"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},
@@ -221,7 +221,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/13/%E9%A2%98%E8%A7%A3/CF903G/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/13/%E9%A2%98%E8%A7%A3/AT1983/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/chen.jpg">
@@ -235,7 +235,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           
-            <a href="/2020/01/13/%E9%A2%98%E8%A7%A3/CF903G/" class="post-title-link" itemprop="url">题解 CF903G Yet Another Maxflow Problem</a>
+            <a href="/2020/01/13/%E9%A2%98%E8%A7%A3/AT1983/" class="post-title-link" itemprop="url">题解 AT1983 BBQ Hard</a>
         </h1>
 
         <div class="post-meta">
@@ -260,14 +260,26 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/OI-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A0%91%E5%BD%A2%E7%BB%93%E6%9E%84-%E7%BA%BF%E6%AE%B5%E6%A0%91/" itemprop="url" rel="index">
-                    <span itemprop="name">OI,数据结构,树形结构,线段树</span>
+                  <a href="/categories/OI/" itemprop="url" rel="index">
+                    <span itemprop="name">OI</span>
+                  </a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/OI/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" itemprop="url" rel="index">
+                    <span itemprop="name">动态规划</span>
+                  </a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/OI/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/%E8%AE%A1%E6%95%B0dp/" itemprop="url" rel="index">
+                    <span itemprop="name">计数dp</span>
                   </a>
                 </span>
             </span>
 
           
-            <span id="/2020/01/13/%E9%A2%98%E8%A7%A3/CF903G/" class="post-meta-item leancloud_visitors" data-flag-title="题解 CF903G Yet Another Maxflow Problem" title="阅读次数">
+            <span id="/2020/01/13/%E9%A2%98%E8%A7%A3/AT1983/" class="post-meta-item leancloud_visitors" data-flag-title="题解 AT1983 BBQ Hard" title="阅读次数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -282,8 +294,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2020/01/13/%E9%A2%98%E8%A7%A3/CF903G/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/01/13/%E9%A2%98%E8%A7%A3/CF903G/" itemprop="commentCount"></span>
+    <a title="valine" href="/2020/01/13/%E9%A2%98%E8%A7%A3/AT1983/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/01/13/%E9%A2%98%E8%A7%A3/AT1983/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -298,11 +310,10 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="题解-CF903G-Yet-Another-Maxflow-Problem"><a href="#题解-CF903G-Yet-Another-Maxflow-Problem" class="headerlink" title="题解 CF903G Yet Another Maxflow Problem"></a>题解 CF903G Yet Another Maxflow Problem</h2><h3 id="题面"><a href="#题面" class="headerlink" title="题面"></a>题面</h3><p><a href="https://www.luogu.com.cn/problem/CF903G" target="_blank" rel="noopener">洛谷</a></p>
-<p><a href="http://codeforces.com/problemset/problem/903/G" target="_blank" rel="noopener">CF</a></p>
+          <h2 id="题解-AT1983-BBQ-Hard"><a href="#题解-AT1983-BBQ-Hard" class="headerlink" title="题解 AT1983 BBQ Hard"></a>题解 AT1983 BBQ Hard</h2><h3 id="题面"><a href="#题面" class="headerlink" title="题面"></a><a href="https://www.luogu.com.cn/problem/AT1983" target="_blank" rel="noopener">题面</a></h3>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2020/01/13/%E9%A2%98%E8%A7%A3/CF903G/#more" rel="contents">
+              <a class="btn" href="/2020/01/13/%E9%A2%98%E8%A7%A3/AT1983/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -901,7 +912,7 @@
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v4.2.0
   </div>
   <span class="post-meta-divider">|</span>
-  <div class="theme-info">主题 – <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.7.0
+  <div class="theme-info">主题 – <a href="https://mist.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> v7.7.0
   </div>
 
         
@@ -934,7 +945,7 @@
 <script src="/js/motion.js"></script>
 
 
-<script src="/js/schemes/pisces.js"></script>
+<script src="/js/schemes/muse.js"></script>
 
 
 <script src="/js/next-boot.js"></script>
