@@ -1,74 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>学习笔记 计数专题</title>
-    <url>/2020/01/18/%E9%A2%98%E8%A7%A3/%E8%AE%A1%E6%95%B0/</url>
-    <content><![CDATA[<h2 id="学习笔记-计数专题"><a href="#学习笔记-计数专题" class="headerlink" title="学习笔记 计数专题"></a>学习笔记 计数专题</h2><a id="more"></a>
-<h3 id="常用公式"><a href="#常用公式" class="headerlink" title="常用公式"></a>常用公式</h3><h4 id="二项式定理"><a href="#二项式定理" class="headerlink" title="二项式定理"></a>二项式定理</h4><script type="math/tex; mode=display">
-(a+b)^n=\sum\limits_{i=0}^n\binom{n}{i}a^ib^{n-i}</script><p>没什么好说的…</p>
-<h4 id="可重组合"><a href="#可重组合" class="headerlink" title="可重组合"></a>可重组合</h4><script type="math/tex; mode=display">
-\binom{n+m-1}{m}</script><p>感性理解一下:</p>
-<p>可以看成把$m$个小球/选择,放到$n$个盒子里.</p>
-<p>举个例子:</p>
-<p>有$6$个盒子,$5$个小球.</p>
-<p>首先盒子可以用$n-1$个隔板(|)隔开:</p>
-<p>$| | | | |$</p>
-<p>然后把小球($*$)放进去:</p>
-<p>$<em>*||</em>||<em>|</em>$</p>
-<p>可以看出,隔板和小球共有$n-1+m$个位置,</p>
-<p>然后选$m$个位置放小球,就是上面的式子了.</p>
-<h4 id="第i种颜色的球有ai个，求排列的方案数"><a href="#第i种颜色的球有ai个，求排列的方案数" class="headerlink" title="第i种颜色的球有ai个，求排列的方案数"></a>第i种颜色的球有ai个，求排列的方案数</h4><script type="math/tex; mode=display">
-\frac{(\sum a[i])!}{\prod a[i]! }</script><p>就是先算所有的方案,再除掉重复的.</p>
-<h4 id="n-的-k-次幂展开"><a href="#n-的-k-次幂展开" class="headerlink" title="$n$的$k$次幂展开"></a>$n$的$k$次幂展开</h4><script type="math/tex; mode=display">
-n^k=\sum\limits_{i=0}^n\begin{Bmatrix}k \\ i  \end{Bmatrix}\binom{n}{i}i!</script><p>相当于把$k$个球染成$n$种颜色的方案数.</p>
-<p>枚举用了几种颜色.</p>
-<h3 id="一个小问题"><a href="#一个小问题" class="headerlink" title="一个小问题"></a>一个小问题</h3><p>求从$(0,0)$到$(n,m)$不碰到直线$y=x+b$的方案数,</p>
-<script type="math/tex; mode=display">
-\binom{n+m}{n}-\binom{n+m}{n-b}</script><p>沿直线轴对称一下就行了.</p>
-<h3 id="斯特林数"><a href="#斯特林数" class="headerlink" title="斯特林数"></a>斯特林数</h3><h4 id="第一类斯特林数"><a href="#第一类斯特林数" class="headerlink" title="第一类斯特林数"></a>第一类斯特林数</h4><p>$n$个不同的人坐$m$张圆桌.</p>
-<script type="math/tex; mode=display">
-\begin{bmatrix}n \\ m \end{bmatrix}=\begin{bmatrix}n-1 \\ m-1 \end{bmatrix}+\begin{bmatrix}n-1 \\ m \end{bmatrix}\times(n-1)</script><h4 id="第二类斯特林数"><a href="#第二类斯特林数" class="headerlink" title="第二类斯特林数"></a>第二类斯特林数</h4><p>$n$个不同的的球放入$m$个相同的盒子.</p>
-<script type="math/tex; mode=display">
-\begin{Bmatrix}n \\ m \end{Bmatrix}=\begin{Bmatrix}n-1 \\ m-1 \end{Bmatrix}+
-\begin{Bmatrix}n-1 \\ m \end{Bmatrix} \times m</script><p>感性理解一下即可.</p>
-<h3 id="错排"><a href="#错排" class="headerlink" title="错排"></a>错排</h3><p>问有多少长度为$n$的序列满足$p_i\not=i$.</p>
-<p>容斥一下即可.</p>
-<script type="math/tex; mode=display">
-ans=\sum\limits_{i=0}^n(-1)^i\binom{n}{i}(n-i)!</script><h3 id="走路问题"><a href="#走路问题" class="headerlink" title="走路问题"></a>走路问题</h3><p>从$(1,1)$走到$(n,m)$,有$k$个关键点不能走,求方案数.</p>
-<p>设$f[i]$表示走到第$i$个关键点的合法方案数.</p>
-<p>则$f[i]=$总方案数$-\sum\limits_j$j到i的方案数$\times f[j]$.</p>
-<h3 id="经典再现-例题"><a href="#经典再现-例题" class="headerlink" title="经典再现(例题)"></a>经典再现(例题)</h3><h4 id="JSOI2011-分特产"><a href="#JSOI2011-分特产" class="headerlink" title="JSOI2011 分特产"></a>JSOI2011 分特产</h4><p><a href="https://www.luogu.com.cn/problem/P5505" target="_blank" rel="noopener">题面</a></p>
-<p><a href="https://hastin-blog.cn/2020/01/16/题解/洛谷5505" target="_blank" rel="noopener">题解</a></p>
-<h4 id="FJOI2016-建筑师"><a href="#FJOI2016-建筑师" class="headerlink" title="FJOI2016 建筑师"></a>FJOI2016 建筑师</h4><p><a href="https://www.luogu.com.cn/problem/P4609" target="_blank" rel="noopener">题面</a></p>
-<p><a href="https://hastin-blog.cn/2020/01/16/题解/洛谷4609" target="_blank" rel="noopener">题解</a></p>
-<h4 id="HAOI2008-硬币购物"><a href="#HAOI2008-硬币购物" class="headerlink" title="HAOI2008 硬币购物"></a>HAOI2008 硬币购物</h4><p><a href="https://www.luogu.com.cn/problem/P1450" target="_blank" rel="noopener">题面</a></p>
-<p><a href="https://hastin-blog.cn/2020/01/16/题解/洛谷1450" target="_blank" rel="noopener">题解</a></p>
-<h4 id="51nod1597-有限背包计数问题"><a href="#51nod1597-有限背包计数问题" class="headerlink" title="51nod1597 有限背包计数问题"></a>51nod1597 有限背包计数问题</h4><p><a href="http://www.51nod.com/Challenge/Problem.html#problemId=1597" target="_blank" rel="noopener">题面</a></p>
-<p><a href="https://hastin-blog.cn/2020/01/17/题解/51nod1597" target="_blank" rel="noopener">题解</a></p>
-<h4 id="SHOI2009-舞会"><a href="#SHOI2009-舞会" class="headerlink" title="SHOI2009 舞会"></a>SHOI2009 舞会</h4><p><a href="https://www.luogu.com.cn/problem/P2159" target="_blank" rel="noopener">题面</a></p>
-<p><a href="https://hastin-blog.cn/2020/01/17/题解/洛谷2159" target="_blank" rel="noopener">题解</a></p>
-<h4 id="AT2062-K-Perm-Counting"><a href="#AT2062-K-Perm-Counting" class="headerlink" title="AT2062 ~K Perm Counting"></a>AT2062 ~K Perm Counting</h4><p><a href="https://www.luogu.com.cn/problem/AT2062" target="_blank" rel="noopener">题面</a></p>
-<p><a href="https://hastin-blog.cn/2020/01/17/题解/AT2062" target="_blank" rel="noopener">题解</a></p>
-<h4 id="codechef-CNTDSETS"><a href="#codechef-CNTDSETS" class="headerlink" title="codechef CNTDSETS"></a>codechef CNTDSETS</h4><p><a href="https://www.codechef.com/problems/CNTDSETS" target="_blank" rel="noopener">题面</a></p>
-<p><a href="https://hastin-blog.cn/2020/01/17/题解/CNTDSETS" target="_blank" rel="noopener">题解</a></p>
-<h4 id="BZOJ2159-Crash的文明世界"><a href="#BZOJ2159-Crash的文明世界" class="headerlink" title="BZOJ2159 Crash的文明世界"></a>BZOJ2159 Crash的文明世界</h4><p>做都没做…</p>
-<h4 id="CF961G-Partitions"><a href="#CF961G-Partitions" class="headerlink" title="CF961G Partitions"></a>CF961G Partitions</h4><p>同上…</p>
-<h4 id="清华集训2017-榕树之心"><a href="#清华集训2017-榕树之心" class="headerlink" title="清华集训2017 榕树之心"></a>清华集训2017 榕树之心</h4><p><a href="https://www.luogu.com.cn/problem/P4228" target="_blank" rel="noopener">题面</a></p>
-<p><a href="https://hastin-blog.cn/2020/01/17/题解/洛谷4228" target="_blank" rel="noopener">题解</a></p>
-<h4 id="ZJOI2017-仙人掌"><a href="#ZJOI2017-仙人掌" class="headerlink" title="ZJOI2017 仙人掌"></a>ZJOI2017 仙人掌</h4><p><a href="https://www.luogu.com.cn/problem/P3687" target="_blank" rel="noopener">题面</a></p>
-<p><a href="https://hastin-blog.cn/2020/01/18/题解/洛谷3687" target="_blank" rel="noopener">题解</a></p>
-<h4 id="AGC013D-Piling-Up"><a href="#AGC013D-Piling-Up" class="headerlink" title="AGC013D Piling Up"></a>AGC013D Piling Up</h4><p><a href="https://www.luogu.com.cn/problem/AT2370" target="_blank" rel="noopener">题面</a></p>
-<p><a href="https://hastin-blog.cn/2020/01/18/题解/AGC013D" target="_blank" rel="noopener">题解</a></p>
-<h4 id="AGC024E-Sequence-Growing-Hard"><a href="#AGC024E-Sequence-Growing-Hard" class="headerlink" title="AGC024E Sequence Growing Hard"></a>AGC024E Sequence Growing Hard</h4><p><a href="https://agc024.contest.atcoder.jp/tasks/agc024_e" target="_blank" rel="noopener">题面</a></p>
-<p>咕咕咕咕咕</p>
-<h4 id="BZOJ2169-连边"><a href="#BZOJ2169-连边" class="headerlink" title="BZOJ2169 连边"></a>BZOJ2169 连边</h4><p><a href="https://www.lydsy.com/JudgeOnline/problem.php?id=2169" target="_blank" rel="noopener">题面</a></p>
-<p><a href="https://hastin-blog.cn/2020/01/18/题解/BZOJ2169" target="_blank" rel="noopener">题解</a></p>
-<h4 id="CF913F-Strongly-Connected-Tournament"><a href="#CF913F-Strongly-Connected-Tournament" class="headerlink" title="CF913F Strongly Connected Tournament"></a>CF913F Strongly Connected Tournament</h4><p><a href="https://www.luogu.com.cn/problem/CF913F" target="_blank" rel="noopener">题面(洛谷)</a></p>
-<p><a href="http://codeforces.com/problemset/problem/913/F" target="_blank" rel="noopener">题面(CF)</a></p>
-<p>咕咕咕咕咕咕</p>
-<h4 id="CF932E-Team-Work"><a href="#CF932E-Team-Work" class="headerlink" title="CF932E Team Work"></a>CF932E Team Work</h4><p><a href="https://www.luogu.com.cn/problem/CF932E" target="_blank" rel="noopener">题面(洛谷)</a></p>
-<p><a href="http://codeforces.com/problemset/problem/932/E" target="_blank" rel="noopener">题面(CF)</a></p>
-<p>咕咕咕咕咕咕咕</p>
+    <title>题解 AGC024E Sequence Growing Hard</title>
+    <url>/2020/01/19/%E9%A2%98%E8%A7%A3/AGC024E/</url>
+    <content><![CDATA[<h2 id="题解-AGC024E-Sequence-Growing-Hard"><a href="#题解-AGC024E-Sequence-Growing-Hard" class="headerlink" title="题解 AGC024E Sequence Growing Hard"></a>题解 AGC024E Sequence Growing Hard</h2><h3 id="题面"><a href="#题面" class="headerlink" title="题面"></a>题面</h3><p><a href="https://agc024.contest.atcoder.jp/tasks/agc024_e" target="_blank" rel="noopener">AtCoder</a></p>
+<a id="more"></a>
+<h3 id="解析"><a href="#解析" class="headerlink" title="解析"></a>解析</h3><p>神仙dp…</p>
+<p>首先可以考虑一个个把数插进数列,这样就能保证子序列的问题.</p>
+<p>然后考虑字典序,实际上只要让每个数插在比它小的数前面就行了.</p>
+<blockquote>
+<p>严格来说相等可能也行，但冷静分析一下发现，保证只加在比它小的数前面恰好防<br>止了重复计数。。。                                                                                                        __Anson</p>
+</blockquote>
+<p>因此设$f[i][j][k]$表示序列长度为$i$,当前插到的数是$j$,插到的是第$k$个位置.</p>
+<p>那么有:</p>
+<ul>
+<li><p>$f[i][j][k-1]+=f[i][j][k](k&gt;0$</p>
+<p>这表示当前的位置不放.</p>
+</li>
+<li><p>$[i][j+1][i]+=f[i][j]<a href="k=0">k</a>$</p>
+<p>这表示放完了,跳到下一个,又从第$i$个位置开始放.</p>
+</li>
+<li><p>$f[i+1][j][k]+=f[i][j][k]*(k+1)$</p>
+<p>这表示我们放这个数,并且有$k+1$个位置可以放(因为有头尾)</p>
+</li>
+</ul>
+<p>然后就没了…</p>
+<h3 id="code"><a href="#code" class="headerlink" title="code"></a>code</h3><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> ll long long</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">read</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> sum=<span class="number">0</span>,f=<span class="number">1</span>;<span class="keyword">char</span> c=getchar();</span><br><span class="line">	<span class="keyword">while</span>(c&gt;<span class="string">'9'</span>||c&lt;<span class="string">'0'</span>)&#123;<span class="keyword">if</span>(c==<span class="string">'-'</span>) f=<span class="number">-1</span>;c=getchar();&#125;</span><br><span class="line">	<span class="keyword">while</span>(c&lt;=<span class="string">'9'</span>&amp;&amp;c&gt;=<span class="string">'0'</span>)&#123;sum=sum*<span class="number">10</span>+c-<span class="string">'0'</span>;c=getchar();&#125;</span><br><span class="line">	<span class="keyword">return</span> f*sum;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N=<span class="number">305</span>;</span><br><span class="line"><span class="keyword">int</span> n,m,K;</span><br><span class="line"><span class="keyword">int</span> f[N][N][N];</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">signed</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	n=read();K=read();m=read();</span><br><span class="line">	f[<span class="number">0</span>][<span class="number">1</span>][<span class="number">0</span>]=<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=n;i++)&#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=K;j++)&#123;</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> k=i;k&gt;=<span class="number">0</span>;k--)&#123;</span><br><span class="line">				<span class="keyword">if</span>(k) f[i][j][k<span class="number">-1</span>]=(f[i][j][k<span class="number">-1</span>]+f[i][j][k])%m;</span><br><span class="line">				<span class="keyword">else</span> f[i][j+<span class="number">1</span>][i]=(f[i][j+<span class="number">1</span>][i]+f[i][j][k])%m;</span><br><span class="line">				f[i+<span class="number">1</span>][j][k]=(f[i+<span class="number">1</span>][j][k]+<span class="number">1l</span>l*f[i][j][k]*(k+<span class="number">1</span>)%m)%m;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d\n"</span>,f[n][K][<span class="number">0</span>]);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <div style="font-size:12px;border-bottom: #ddd 1px solid; BORDER-LEFT: #ddd 1px solid; BACKGROUND: #f6f6f6; HEIGHT: 120px; BORDER-TOP: #ddd 1px solid; BORDER-RIGHT: #ddd 1px solid">
 <div style="MARGIN-TOP: 10px; FLOAT: left; MARGIN-LEFT: 5px; MARGIN-RIGHT: 10px">
 <IMG alt="" src="https://avatars1.githubusercontent.com/u/168751?v=3&s=140" width=90 height=100>
@@ -86,13 +43,79 @@ ans=\sum\limits_{i=0}^n(-1)^i\binom{n}{i}(n-i)!</script><h3 id="走路问题"><a
       <categories>
         <category>OI</category>
         <category>动态规划</category>
-        <category>数学</category>
         <category>计数dp</category>
-        <category>组合计数</category>
       </categories>
       <tags>
         <tag>计数dp</tag>
-        <tag>组合计数</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>题解 AGC013D PilingUp</title>
+    <url>/2020/01/18/%E9%A2%98%E8%A7%A3/AGC013D/</url>
+    <content><![CDATA[<h2 id="题解-AGC013D-PilingUp"><a href="#题解-AGC013D-PilingUp" class="headerlink" title="题解 AGC013D PilingUp"></a>题解 AGC013D PilingUp</h2><h3 id="题面"><a href="#题面" class="headerlink" title="题面"></a>题面</h3><p><a href="https://www.luogu.com.cn/problem/AT2370" target="_blank" rel="noopener">洛谷</a></p>
+<p><a href="https://agc013.contest.atcoder.jp/tasks/agc013_d" target="_blank" rel="noopener">AtCoder</a></p>
+<a id="more"></a>
+<h3 id="解析"><a href="#解析" class="headerlink" title="解析"></a>解析</h3><p>先设$f[i][j]$表示取第$i$次后还有$j$个黑球的方案数.</p>
+<p>分情况讨论:</p>
+<ul>
+<li><p>先黑后白:</p>
+<p>$f[i+1][j]+=f[i]<a href="j\geq 1">j</a>$</p>
+</li>
+<li><p>先黑后黑:</p>
+<p>$f[i+1][j-1]+=f[i]<a href="j\geq 1">j</a>$</p>
+</li>
+<li><p>先白后黑:</p>
+<p>$f[i+1][j+1]+=f[i]<a href="j&lt;n">j</a>$</p>
+</li>
+<li><p>先白后白:</p>
+<p>$f[i+1][j]+=f[i]<a href="j&lt;n">j</a>$</p>
+</li>
+</ul>
+<p>但是,这样是伪的……因为我们这样会算重复.</p>
+<p>因此考虑转换成折线,发现不重复的话就把折线往下平移到坐标轴.</p>
+<p>换言之,就是要让黑球在某个时刻数目变成$0$.</p>
+<p>那么设$f[i][j][0/1]$表示$j$是否在中途某个时刻变成了$0$.</p>
+<p>继续分类讨论:</p>
+<ul>
+<li><p>先黑后白:</p>
+<p>$f[i+1][j][1]+=f[i][j]<a href="j=1">0</a>$</p>
+<p>$f[i+1][j][0]+=f[i][j]<a href="j&gt;1">0</a>$</p>
+<p>$f[i+1][j][1]+=f[i][j]<a href="j&gt;0">1</a>$</p>
+</li>
+<li><p>先黑后黑:</p>
+<p>$f[i+1][j-1][1]+=f[i][j]<a href="j=1">0</a>$</p>
+<p>$f[i+1][j-1][0]+=f[i][j]<a href="j&gt;1">0</a>$</p>
+<p>$f[i][j-1][1]+=f[i][j]<a href="j&gt;0">1</a>$</p>
+</li>
+<li><p>先白后黑:</p>
+<p>$f[i+1][j][0/1]+=f[i][j]<a href="j&lt;n">0/1</a>$</p>
+</li>
+<li><p>先白后白:</p>
+<p>$f[i+1][j+1][0/1]+=f[i][j]<a href="j&lt;n">0/1</a>$</p>
+</li>
+</ul>
+<p>注意初始化就行了.</p>
+<div style="font-size:12px;border-bottom: #ddd 1px solid; BORDER-LEFT: #ddd 1px solid; BACKGROUND: #f6f6f6; HEIGHT: 120px; BORDER-TOP: #ddd 1px solid; BORDER-RIGHT: #ddd 1px solid">
+<div style="MARGIN-TOP: 10px; FLOAT: left; MARGIN-LEFT: 5px; MARGIN-RIGHT: 10px">
+<IMG alt="" src="https://avatars1.githubusercontent.com/u/168751?v=3&s=140" width=90 height=100>
+</div>
+<div style="LINE-HEIGHT: 200%; MARGIN-TOP: 10px; COLOR: #000000">
+本文链接：<a href="https://zsq259.github.io" target="_blank" rel="noopener">https://zsq259.github.io</a> <br/>
+作者： 
+<a href="http://zsq259.github.io/" target="_blank" rel="noopener">Hastin</a> <br/>出处： 
+<a href="http://zsq259.github.io/" target="_blank" rel="noopener">http://zsq259.github.io/</a>
+<br/>本文基于<a target="_blank" title="Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" href="http://creativecommons.org/licenses/by-sa/4.0/"> 知识共享署名-相同方式共享 4.0 </a>
+国际许可协议发布，欢迎转载，演绎或用于商业目的，但是必须保留本文的署名 
+<a href="http://zsq259.github.io/" target="_blank" rel="noopener">Hastin</a>及链接。
+</div>
+</div>]]></content>
+      <categories>
+        <category>OI</category>
+        <category>动态规划</category>
+        <category>计数dp</category>
+      </categories>
+      <tags>
+        <tag>计数dp</tag>
       </tags>
   </entry>
   <entry>
@@ -194,51 +217,74 @@ f[i][j]+=
       </tags>
   </entry>
   <entry>
-    <title>题解 AGC013D PilingUp</title>
-    <url>/2020/01/18/%E9%A2%98%E8%A7%A3/AGC013D/</url>
-    <content><![CDATA[<h2 id="题解-AGC013D-PilingUp"><a href="#题解-AGC013D-PilingUp" class="headerlink" title="题解 AGC013D PilingUp"></a>题解 AGC013D PilingUp</h2><h3 id="题面"><a href="#题面" class="headerlink" title="题面"></a>题面</h3><p><a href="https://www.luogu.com.cn/problem/AT2370" target="_blank" rel="noopener">洛谷</a></p>
-<p><a href="https://agc013.contest.atcoder.jp/tasks/agc013_d" target="_blank" rel="noopener">AtCoder</a></p>
-<a id="more"></a>
-<h3 id="解析"><a href="#解析" class="headerlink" title="解析"></a>解析</h3><p>先设$f[i][j]$表示取第$i$次后还有$j$个黑球的方案数.</p>
-<p>分情况讨论:</p>
-<ul>
-<li><p>先黑后白:</p>
-<p>$f[i+1][j]+=f[i]<a href="j\geq 1">j</a>$</p>
-</li>
-<li><p>先黑后黑:</p>
-<p>$f[i+1][j-1]+=f[i]<a href="j\geq 1">j</a>$</p>
-</li>
-<li><p>先白后黑:</p>
-<p>$f[i+1][j+1]+=f[i]<a href="j&lt;n">j</a>$</p>
-</li>
-<li><p>先白后白:</p>
-<p>$f[i+1][j]+=f[i]<a href="j&lt;n">j</a>$</p>
-</li>
-</ul>
-<p>但是,这样是伪的……因为我们这样会算重复.</p>
-<p>因此考虑转换成折线,发现不重复的话就把折线往下平移到坐标轴.</p>
-<p>换言之,就是要让黑球在某个时刻数目变成$0$.</p>
-<p>那么设$f[i][j][0/1]$表示$j$是否在中途某个时刻变成了$0$.</p>
-<p>继续分类讨论:</p>
-<ul>
-<li><p>先黑后白:</p>
-<p>$f[i+1][j][1]+=f[i][j]<a href="j=1">0</a>$</p>
-<p>$f[i+1][j][0]+=f[i][j]<a href="j&gt;1">0</a>$</p>
-<p>$f[i+1][j][1]+=f[i][j]<a href="j&gt;0">1</a>$</p>
-</li>
-<li><p>先黑后黑:</p>
-<p>$f[i+1][j-1][1]+=f[i][j]<a href="j=1">0</a>$</p>
-<p>$f[i+1][j-1][0]+=f[i][j]<a href="j&gt;1">0</a>$</p>
-<p>$f[i][j-1][1]+=f[i][j]<a href="j&gt;0">1</a>$</p>
-</li>
-<li><p>先白后黑:</p>
-<p>$f[i+1][j][0/1]+=f[i][j]<a href="j&lt;n">0/1</a>$</p>
-</li>
-<li><p>先白后白:</p>
-<p>$f[i+1][j+1][0/1]+=f[i][j]<a href="j&lt;n">0/1</a>$</p>
-</li>
-</ul>
-<p>注意初始化就行了.</p>
+    <title>学习笔记 计数专题</title>
+    <url>/2020/01/18/%E9%A2%98%E8%A7%A3/%E8%AE%A1%E6%95%B0/</url>
+    <content><![CDATA[<h2 id="学习笔记-计数专题"><a href="#学习笔记-计数专题" class="headerlink" title="学习笔记 计数专题"></a>学习笔记 计数专题</h2><a id="more"></a>
+<h3 id="常用公式"><a href="#常用公式" class="headerlink" title="常用公式"></a>常用公式</h3><h4 id="二项式定理"><a href="#二项式定理" class="headerlink" title="二项式定理"></a>二项式定理</h4><script type="math/tex; mode=display">
+(a+b)^n=\sum\limits_{i=0}^n\binom{n}{i}a^ib^{n-i}</script><p>没什么好说的…</p>
+<h4 id="可重组合"><a href="#可重组合" class="headerlink" title="可重组合"></a>可重组合</h4><script type="math/tex; mode=display">
+\binom{n+m-1}{m}</script><p>感性理解一下:</p>
+<p>可以看成把$m$个小球/选择,放到$n$个盒子里.</p>
+<p>举个例子:</p>
+<p>有$6$个盒子,$5$个小球.</p>
+<p>首先盒子可以用$n-1$个隔板(|)隔开:</p>
+<p>$| | | | |$</p>
+<p>然后把小球($*$)放进去:</p>
+<p>$<em>*||</em>||<em>|</em>$</p>
+<p>可以看出,隔板和小球共有$n-1+m$个位置,</p>
+<p>然后选$m$个位置放小球,就是上面的式子了.</p>
+<h4 id="第i种颜色的球有ai个，求排列的方案数"><a href="#第i种颜色的球有ai个，求排列的方案数" class="headerlink" title="第i种颜色的球有ai个，求排列的方案数"></a>第i种颜色的球有ai个，求排列的方案数</h4><script type="math/tex; mode=display">
+\frac{(\sum a[i])!}{\prod a[i]! }</script><p>就是先算所有的方案,再除掉重复的.</p>
+<h4 id="n-的-k-次幂展开"><a href="#n-的-k-次幂展开" class="headerlink" title="$n$的$k$次幂展开"></a>$n$的$k$次幂展开</h4><script type="math/tex; mode=display">
+n^k=\sum\limits_{i=0}^n\begin{Bmatrix}k \\ i  \end{Bmatrix}\binom{n}{i}i!</script><p>相当于把$k$个球染成$n$种颜色的方案数.</p>
+<p>枚举用了几种颜色.</p>
+<h3 id="一个小问题"><a href="#一个小问题" class="headerlink" title="一个小问题"></a>一个小问题</h3><p>求从$(0,0)$到$(n,m)$不碰到直线$y=x+b$的方案数,</p>
+<script type="math/tex; mode=display">
+\binom{n+m}{n}-\binom{n+m}{n-b}</script><p>沿直线轴对称一下就行了.</p>
+<h3 id="斯特林数"><a href="#斯特林数" class="headerlink" title="斯特林数"></a>斯特林数</h3><h4 id="第一类斯特林数"><a href="#第一类斯特林数" class="headerlink" title="第一类斯特林数"></a>第一类斯特林数</h4><p>$n$个不同的人坐$m$张圆桌.</p>
+<script type="math/tex; mode=display">
+\begin{bmatrix}n \\ m \end{bmatrix}=\begin{bmatrix}n-1 \\ m-1 \end{bmatrix}+\begin{bmatrix}n-1 \\ m \end{bmatrix}\times(n-1)</script><h4 id="第二类斯特林数"><a href="#第二类斯特林数" class="headerlink" title="第二类斯特林数"></a>第二类斯特林数</h4><p>$n$个不同的的球放入$m$个相同的盒子.</p>
+<script type="math/tex; mode=display">
+\begin{Bmatrix}n \\ m \end{Bmatrix}=\begin{Bmatrix}n-1 \\ m-1 \end{Bmatrix}+
+\begin{Bmatrix}n-1 \\ m \end{Bmatrix} \times m</script><p>感性理解一下即可.</p>
+<h3 id="错排"><a href="#错排" class="headerlink" title="错排"></a>错排</h3><p>问有多少长度为$n$的序列满足$p_i\not=i$.</p>
+<p>容斥一下即可.</p>
+<script type="math/tex; mode=display">
+ans=\sum\limits_{i=0}^n(-1)^i\binom{n}{i}(n-i)!</script><h3 id="走路问题"><a href="#走路问题" class="headerlink" title="走路问题"></a>走路问题</h3><p>从$(1,1)$走到$(n,m)$,有$k$个关键点不能走,求方案数.</p>
+<p>设$f[i]$表示走到第$i$个关键点的合法方案数.</p>
+<p>则$f[i]=$总方案数$-\sum\limits_j$j到i的方案数$\times f[j]$.</p>
+<h3 id="经典再现-例题"><a href="#经典再现-例题" class="headerlink" title="经典再现(例题)"></a>经典再现(例题)</h3><h4 id="JSOI2011-分特产"><a href="#JSOI2011-分特产" class="headerlink" title="JSOI2011 分特产"></a>JSOI2011 分特产</h4><p><a href="https://www.luogu.com.cn/problem/P5505" target="_blank" rel="noopener">题面</a></p>
+<p><a href="https://hastin-blog.cn/2020/01/16/题解/洛谷5505" target="_blank" rel="noopener">题解</a></p>
+<h4 id="FJOI2016-建筑师"><a href="#FJOI2016-建筑师" class="headerlink" title="FJOI2016 建筑师"></a>FJOI2016 建筑师</h4><p><a href="https://www.luogu.com.cn/problem/P4609" target="_blank" rel="noopener">题面</a></p>
+<p><a href="https://hastin-blog.cn/2020/01/16/题解/洛谷4609" target="_blank" rel="noopener">题解</a></p>
+<h4 id="HAOI2008-硬币购物"><a href="#HAOI2008-硬币购物" class="headerlink" title="HAOI2008 硬币购物"></a>HAOI2008 硬币购物</h4><p><a href="https://www.luogu.com.cn/problem/P1450" target="_blank" rel="noopener">题面</a></p>
+<p><a href="https://hastin-blog.cn/2020/01/16/题解/洛谷1450" target="_blank" rel="noopener">题解</a></p>
+<h4 id="51nod1597-有限背包计数问题"><a href="#51nod1597-有限背包计数问题" class="headerlink" title="51nod1597 有限背包计数问题"></a>51nod1597 有限背包计数问题</h4><p><a href="http://www.51nod.com/Challenge/Problem.html#problemId=1597" target="_blank" rel="noopener">题面</a></p>
+<p><a href="https://hastin-blog.cn/2020/01/17/题解/51nod1597" target="_blank" rel="noopener">题解</a></p>
+<h4 id="SHOI2009-舞会"><a href="#SHOI2009-舞会" class="headerlink" title="SHOI2009 舞会"></a>SHOI2009 舞会</h4><p><a href="https://www.luogu.com.cn/problem/P2159" target="_blank" rel="noopener">题面</a></p>
+<p><a href="https://hastin-blog.cn/2020/01/17/题解/洛谷2159" target="_blank" rel="noopener">题解</a></p>
+<h4 id="AT2062-K-Perm-Counting"><a href="#AT2062-K-Perm-Counting" class="headerlink" title="AT2062 ~K Perm Counting"></a>AT2062 ~K Perm Counting</h4><p><a href="https://www.luogu.com.cn/problem/AT2062" target="_blank" rel="noopener">题面</a></p>
+<p><a href="https://hastin-blog.cn/2020/01/17/题解/AT2062" target="_blank" rel="noopener">题解</a></p>
+<h4 id="codechef-CNTDSETS"><a href="#codechef-CNTDSETS" class="headerlink" title="codechef CNTDSETS"></a>codechef CNTDSETS</h4><p><a href="https://www.codechef.com/problems/CNTDSETS" target="_blank" rel="noopener">题面</a></p>
+<p><a href="https://hastin-blog.cn/2020/01/17/题解/CNTDSETS" target="_blank" rel="noopener">题解</a></p>
+<h4 id="BZOJ2159-Crash的文明世界"><a href="#BZOJ2159-Crash的文明世界" class="headerlink" title="BZOJ2159 Crash的文明世界"></a>BZOJ2159 Crash的文明世界</h4><p>做都没做…</p>
+<h4 id="CF961G-Partitions"><a href="#CF961G-Partitions" class="headerlink" title="CF961G Partitions"></a>CF961G Partitions</h4><p>同上…</p>
+<h4 id="清华集训2017-榕树之心"><a href="#清华集训2017-榕树之心" class="headerlink" title="清华集训2017 榕树之心"></a>清华集训2017 榕树之心</h4><p><a href="https://www.luogu.com.cn/problem/P4228" target="_blank" rel="noopener">题面</a></p>
+<p><a href="https://hastin-blog.cn/2020/01/17/题解/洛谷4228" target="_blank" rel="noopener">题解</a></p>
+<h4 id="ZJOI2017-仙人掌"><a href="#ZJOI2017-仙人掌" class="headerlink" title="ZJOI2017 仙人掌"></a>ZJOI2017 仙人掌</h4><p><a href="https://www.luogu.com.cn/problem/P3687" target="_blank" rel="noopener">题面</a></p>
+<p><a href="https://hastin-blog.cn/2020/01/18/题解/洛谷3687" target="_blank" rel="noopener">题解</a></p>
+<h4 id="AGC013D-Piling-Up"><a href="#AGC013D-Piling-Up" class="headerlink" title="AGC013D Piling Up"></a>AGC013D Piling Up</h4><p><a href="https://www.luogu.com.cn/problem/AT2370" target="_blank" rel="noopener">题面</a></p>
+<p><a href="https://hastin-blog.cn/2020/01/18/题解/AGC013D" target="_blank" rel="noopener">题解</a></p>
+<h4 id="AGC024E-Sequence-Growing-Hard"><a href="#AGC024E-Sequence-Growing-Hard" class="headerlink" title="AGC024E Sequence Growing Hard"></a>AGC024E Sequence Growing Hard</h4><p><a href="https://agc024.contest.atcoder.jp/tasks/agc024_e" target="_blank" rel="noopener">题面</a></p>
+<p>咕咕咕咕咕</p>
+<h4 id="BZOJ2169-连边"><a href="#BZOJ2169-连边" class="headerlink" title="BZOJ2169 连边"></a>BZOJ2169 连边</h4><p><a href="https://www.lydsy.com/JudgeOnline/problem.php?id=2169" target="_blank" rel="noopener">题面</a></p>
+<p><a href="https://hastin-blog.cn/2020/01/18/题解/BZOJ2169" target="_blank" rel="noopener">题解</a></p>
+<h4 id="CF913F-Strongly-Connected-Tournament"><a href="#CF913F-Strongly-Connected-Tournament" class="headerlink" title="CF913F Strongly Connected Tournament"></a>CF913F Strongly Connected Tournament</h4><p><a href="https://www.luogu.com.cn/problem/CF913F" target="_blank" rel="noopener">题面(洛谷)</a></p>
+<p><a href="http://codeforces.com/problemset/problem/913/F" target="_blank" rel="noopener">题面(CF)</a></p>
+<p>咕咕咕咕咕咕</p>
+<h4 id="CF932E-Team-Work"><a href="#CF932E-Team-Work" class="headerlink" title="CF932E Team Work"></a>CF932E Team Work</h4><p><a href="https://www.luogu.com.cn/problem/CF932E" target="_blank" rel="noopener">题面(洛谷)</a></p>
+<p><a href="http://codeforces.com/problemset/problem/932/E" target="_blank" rel="noopener">题面(CF)</a></p>
+<p>咕咕咕咕咕咕咕</p>
 <div style="font-size:12px;border-bottom: #ddd 1px solid; BORDER-LEFT: #ddd 1px solid; BACKGROUND: #f6f6f6; HEIGHT: 120px; BORDER-TOP: #ddd 1px solid; BORDER-RIGHT: #ddd 1px solid">
 <div style="MARGIN-TOP: 10px; FLOAT: left; MARGIN-LEFT: 5px; MARGIN-RIGHT: 10px">
 <IMG alt="" src="https://avatars1.githubusercontent.com/u/168751?v=3&s=140" width=90 height=100>
@@ -256,10 +302,13 @@ f[i][j]+=
       <categories>
         <category>OI</category>
         <category>动态规划</category>
+        <category>数学</category>
         <category>计数dp</category>
+        <category>组合计数</category>
       </categories>
       <tags>
         <tag>计数dp</tag>
+        <tag>组合计数</tag>
       </tags>
   </entry>
   <entry>
@@ -355,6 +404,47 @@ f[i][j]+=
       </tags>
   </entry>
   <entry>
+    <title>题解 codechef CNTDSETS</title>
+    <url>/2020/01/17/%E9%A2%98%E8%A7%A3/CNTDSETS/</url>
+    <content><![CDATA[<h2 id="题解-codechef-CNTDSETS"><a href="#题解-codechef-CNTDSETS" class="headerlink" title="题解 codechef CNTDSETS"></a>题解 codechef CNTDSETS</h2><h3 id="题面"><a href="#题面" class="headerlink" title="题面"></a>题面</h3><p><a href="https://www.codechef.com/problems/CNTDSETS" target="_blank" rel="noopener">codechef</a></p>
+<a id="more"></a>
+<h3 id="解析"><a href="#解析" class="headerlink" title="解析"></a>解析</h3><p>首先考虑平移的限制,</p>
+<p>我们可以理解成,把每一位的点都尽量往坐标轴上靠,直到某一个点的坐标为0.</p>
+<p>而距离限制也可以转化成为每一维的坐标不超过$D$.</p>
+<p>然后设$f(d)$表示直径小于等于$d$的点集数目.</p>
+<p>则答案可以表示为$f(D)-f(D-1)$.</p>
+<p>再容斥有$i$维坐标没有$0$.</p>
+<p>则$f(d)=\sum\limits_{i=0}^n(-1)^i\binom{n}{i}2^{d^i(d+1)^{n-i}}$</p>
+<p>其中$\binom{n}{i}$表示$n$维中选出$i$维,</p>
+<p>$d^i(d+1)^{n-i}$表示有$i$维的坐标可以取$[1,d]$(被限制),剩下的在$[0,d]$中随便取.</p>
+<p>而$2^{d^i(d+1)^{n-i}}$表示每个点都可以选或不选.</p>
+<p>用欧拉定理的时候要注意一下.</p>
+<p>code:</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> ll long long</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">read</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> sum=<span class="number">0</span>,f=<span class="number">1</span>;<span class="keyword">char</span> c=getchar();</span><br><span class="line">	<span class="keyword">while</span>(c&gt;<span class="string">'9'</span>||c&lt;<span class="string">'0'</span>)&#123;<span class="keyword">if</span>(c==<span class="string">'-'</span>) f=<span class="number">-1</span>;c=getchar();&#125;</span><br><span class="line">	<span class="keyword">while</span>(c&lt;=<span class="string">'9'</span>&amp;&amp;c&gt;=<span class="string">'0'</span>)&#123;sum=sum*<span class="number">10</span>+c-<span class="string">'0'</span>;c=getchar();&#125;</span><br><span class="line">	<span class="keyword">return</span> f*sum;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N=<span class="number">1005</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> Mod=<span class="number">1000000007</span>;</span><br><span class="line"><span class="keyword">int</span> T,n,D;</span><br><span class="line">ll c[N][N];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">inline</span> ll <span class="title">fpow</span><span class="params">(ll a,ll b,ll Mod)</span></span>&#123;</span><br><span class="line">	ll ret=<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span>(;b;a=a*a%Mod,b&gt;&gt;=<span class="number">1</span>) <span class="keyword">if</span>(b&amp;<span class="number">1</span>) ret=ret*a%Mod;</span><br><span class="line">	<span class="keyword">return</span> ret;</span><br><span class="line">&#125; </span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">inline</span> ll <span class="title">f</span><span class="params">(<span class="keyword">int</span> d)</span></span>&#123;</span><br><span class="line">	ll ans=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=n;i++)&#123;</span><br><span class="line">		ans=(ans+<span class="number">1l</span>l*c[n][i]*fpow(<span class="number">2</span>,fpow(d,i,Mod<span class="number">-1</span>)*(fpow(d+<span class="number">1</span>,n-i,Mod<span class="number">-1</span>))%(Mod<span class="number">-1</span>),Mod)%Mod*(i&amp;<span class="number">1</span>? <span class="number">-1</span>:<span class="number">1</span>))%Mod;</span><br><span class="line">		ans=(ans+Mod)%Mod;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> ans;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">signed</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	T=read();</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;N;i++) c[i][<span class="number">0</span>]=<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;N;i++)&#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;N;j++) c[i][j]=(c[i<span class="number">-1</span>][j<span class="number">-1</span>]+c[i<span class="number">-1</span>][j])%Mod;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">while</span>(T--)&#123;</span><br><span class="line">		n=read();D=read();</span><br><span class="line">		ll ans=f(D)-f(D<span class="number">-1</span>);</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"%lld\n"</span>,(ans+Mod)%Mod);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<div style="font-size:12px;border-bottom: #ddd 1px solid; BORDER-LEFT: #ddd 1px solid; BACKGROUND: #f6f6f6; HEIGHT: 120px; BORDER-TOP: #ddd 1px solid; BORDER-RIGHT: #ddd 1px solid">
+<div style="MARGIN-TOP: 10px; FLOAT: left; MARGIN-LEFT: 5px; MARGIN-RIGHT: 10px">
+<IMG alt="" src="https://avatars1.githubusercontent.com/u/168751?v=3&s=140" width=90 height=100>
+</div>
+<div style="LINE-HEIGHT: 200%; MARGIN-TOP: 10px; COLOR: #000000">
+本文链接：<a href="https://zsq259.github.io" target="_blank" rel="noopener">https://zsq259.github.io</a> <br/>
+作者： 
+<a href="http://zsq259.github.io/" target="_blank" rel="noopener">Hastin</a> <br/>出处： 
+<a href="http://zsq259.github.io/" target="_blank" rel="noopener">http://zsq259.github.io/</a>
+<br/>本文基于<a target="_blank" title="Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" href="http://creativecommons.org/licenses/by-sa/4.0/"> 知识共享署名-相同方式共享 4.0 </a>
+国际许可协议发布，欢迎转载，演绎或用于商业目的，但是必须保留本文的署名 
+<a href="http://zsq259.github.io/" target="_blank" rel="noopener">Hastin</a>及链接。
+</div>
+</div>]]></content>
+      <categories>
+        <category>OI</category>
+        <category>数学</category>
+        <category>组合计数</category>
+      </categories>
+      <tags>
+        <tag>组合计数</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>题解 51nod1597 有限背包计数问题</title>
     <url>/2020/01/17/%E9%A2%98%E8%A7%A3/51nod1597/</url>
     <content><![CDATA[<h2 id="题解-51nod1597-有限背包计数问题"><a href="#题解-51nod1597-有限背包计数问题" class="headerlink" title="题解 51nod1597 有限背包计数问题"></a>题解 51nod1597 有限背包计数问题</h2><h3 id="题面"><a href="#题面" class="headerlink" title="题面"></a>题面</h3><p><a href="http://www.51nod.com/Challenge/Problem.html#problemId=1597" target="_blank" rel="noopener">51nod</a></p>
@@ -409,47 +499,6 @@ f[i][j]+=
       </categories>
       <tags>
         <tag>计数DP</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>题解 codechef CNTDSETS</title>
-    <url>/2020/01/17/%E9%A2%98%E8%A7%A3/CNTDSETS/</url>
-    <content><![CDATA[<h2 id="题解-codechef-CNTDSETS"><a href="#题解-codechef-CNTDSETS" class="headerlink" title="题解 codechef CNTDSETS"></a>题解 codechef CNTDSETS</h2><h3 id="题面"><a href="#题面" class="headerlink" title="题面"></a>题面</h3><p><a href="https://www.codechef.com/problems/CNTDSETS" target="_blank" rel="noopener">codechef</a></p>
-<a id="more"></a>
-<h3 id="解析"><a href="#解析" class="headerlink" title="解析"></a>解析</h3><p>首先考虑平移的限制,</p>
-<p>我们可以理解成,把每一位的点都尽量往坐标轴上靠,直到某一个点的坐标为0.</p>
-<p>而距离限制也可以转化成为每一维的坐标不超过$D$.</p>
-<p>然后设$f(d)$表示直径小于等于$d$的点集数目.</p>
-<p>则答案可以表示为$f(D)-f(D-1)$.</p>
-<p>再容斥有$i$维坐标没有$0$.</p>
-<p>则$f(d)=\sum\limits_{i=0}^n(-1)^i\binom{n}{i}2^{d^i(d+1)^{n-i}}$</p>
-<p>其中$\binom{n}{i}$表示$n$维中选出$i$维,</p>
-<p>$d^i(d+1)^{n-i}$表示有$i$维的坐标可以取$[1,d]$(被限制),剩下的在$[0,d]$中随便取.</p>
-<p>而$2^{d^i(d+1)^{n-i}}$表示每个点都可以选或不选.</p>
-<p>用欧拉定理的时候要注意一下.</p>
-<p>code:</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> ll long long</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">read</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> sum=<span class="number">0</span>,f=<span class="number">1</span>;<span class="keyword">char</span> c=getchar();</span><br><span class="line">	<span class="keyword">while</span>(c&gt;<span class="string">'9'</span>||c&lt;<span class="string">'0'</span>)&#123;<span class="keyword">if</span>(c==<span class="string">'-'</span>) f=<span class="number">-1</span>;c=getchar();&#125;</span><br><span class="line">	<span class="keyword">while</span>(c&lt;=<span class="string">'9'</span>&amp;&amp;c&gt;=<span class="string">'0'</span>)&#123;sum=sum*<span class="number">10</span>+c-<span class="string">'0'</span>;c=getchar();&#125;</span><br><span class="line">	<span class="keyword">return</span> f*sum;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N=<span class="number">1005</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> Mod=<span class="number">1000000007</span>;</span><br><span class="line"><span class="keyword">int</span> T,n,D;</span><br><span class="line">ll c[N][N];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">inline</span> ll <span class="title">fpow</span><span class="params">(ll a,ll b,ll Mod)</span></span>&#123;</span><br><span class="line">	ll ret=<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span>(;b;a=a*a%Mod,b&gt;&gt;=<span class="number">1</span>) <span class="keyword">if</span>(b&amp;<span class="number">1</span>) ret=ret*a%Mod;</span><br><span class="line">	<span class="keyword">return</span> ret;</span><br><span class="line">&#125; </span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">inline</span> ll <span class="title">f</span><span class="params">(<span class="keyword">int</span> d)</span></span>&#123;</span><br><span class="line">	ll ans=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=n;i++)&#123;</span><br><span class="line">		ans=(ans+<span class="number">1l</span>l*c[n][i]*fpow(<span class="number">2</span>,fpow(d,i,Mod<span class="number">-1</span>)*(fpow(d+<span class="number">1</span>,n-i,Mod<span class="number">-1</span>))%(Mod<span class="number">-1</span>),Mod)%Mod*(i&amp;<span class="number">1</span>? <span class="number">-1</span>:<span class="number">1</span>))%Mod;</span><br><span class="line">		ans=(ans+Mod)%Mod;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> ans;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">signed</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	T=read();</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;N;i++) c[i][<span class="number">0</span>]=<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;N;i++)&#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;N;j++) c[i][j]=(c[i<span class="number">-1</span>][j<span class="number">-1</span>]+c[i<span class="number">-1</span>][j])%Mod;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">while</span>(T--)&#123;</span><br><span class="line">		n=read();D=read();</span><br><span class="line">		ll ans=f(D)-f(D<span class="number">-1</span>);</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"%lld\n"</span>,(ans+Mod)%Mod);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<div style="font-size:12px;border-bottom: #ddd 1px solid; BORDER-LEFT: #ddd 1px solid; BACKGROUND: #f6f6f6; HEIGHT: 120px; BORDER-TOP: #ddd 1px solid; BORDER-RIGHT: #ddd 1px solid">
-<div style="MARGIN-TOP: 10px; FLOAT: left; MARGIN-LEFT: 5px; MARGIN-RIGHT: 10px">
-<IMG alt="" src="https://avatars1.githubusercontent.com/u/168751?v=3&s=140" width=90 height=100>
-</div>
-<div style="LINE-HEIGHT: 200%; MARGIN-TOP: 10px; COLOR: #000000">
-本文链接：<a href="https://zsq259.github.io" target="_blank" rel="noopener">https://zsq259.github.io</a> <br/>
-作者： 
-<a href="http://zsq259.github.io/" target="_blank" rel="noopener">Hastin</a> <br/>出处： 
-<a href="http://zsq259.github.io/" target="_blank" rel="noopener">http://zsq259.github.io/</a>
-<br/>本文基于<a target="_blank" title="Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" href="http://creativecommons.org/licenses/by-sa/4.0/"> 知识共享署名-相同方式共享 4.0 </a>
-国际许可协议发布，欢迎转载，演绎或用于商业目的，但是必须保留本文的署名 
-<a href="http://zsq259.github.io/" target="_blank" rel="noopener">Hastin</a>及链接。
-</div>
-</div>]]></content>
-      <categories>
-        <category>OI</category>
-        <category>数学</category>
-        <category>组合计数</category>
-      </categories>
-      <tags>
-        <tag>组合计数</tag>
       </tags>
   </entry>
   <entry>
