@@ -323,7 +323,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/20/%E9%A2%98%E8%A7%A3/%E5%A4%9A%E9%A1%B9%E5%BC%8F/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/10/%E9%A2%98%E8%A7%A3/51nod2883/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/chen.jpg">
@@ -337,7 +337,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           
-            <a href="/2020/01/20/%E9%A2%98%E8%A7%A3/%E5%A4%9A%E9%A1%B9%E5%BC%8F/" class="post-title-link" itemprop="url">学习笔记 多项式专题</a>
+            <a href="/2020/04/10/%E9%A2%98%E8%A7%A3/51nod2883/" class="post-title-link" itemprop="url">题解 51nod2883 城市</a>
         </h1>
 
         <div class="post-meta">
@@ -348,7 +348,501 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-01-20 00:00:00 / 修改时间：14:05:27" itemprop="dateCreated datePublished" datetime="2020-01-20T00:00:00+08:00">2020-01-20</time>
+              <time title="创建时间：2020-04-10 00:00:00 / 修改时间：10:00:54" itemprop="dateCreated datePublished" datetime="2020-04-10T00:00:00+08:00">2020-04-10</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/OI/" itemprop="url" rel="index">
+                    <span itemprop="name">OI</span>
+                  </a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/OI/%E5%9B%BE%E8%AE%BA/" itemprop="url" rel="index">
+                    <span itemprop="name">图论</span>
+                  </a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/OI/%E5%9B%BE%E8%AE%BA/%E6%9C%80%E7%9F%AD%E8%B7%AF/" itemprop="url" rel="index">
+                    <span itemprop="name">最短路</span>
+                  </a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/OI/%E6%9D%82%E9%A1%B9/" itemprop="url" rel="index">
+                    <span itemprop="name">杂项</span>
+                  </a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/OI/%E5%9B%BE%E8%AE%BA/DAG/" itemprop="url" rel="index">
+                    <span itemprop="name">DAG</span>
+                  </a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/OI/%E5%9B%BE%E8%AE%BA/DAG/%E6%8B%93%E6%89%91%E6%8E%92%E5%BA%8F/" itemprop="url" rel="index">
+                    <span itemprop="name">拓扑排序</span>
+                  </a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/OI/%E6%9D%82%E9%A1%B9/%E5%80%8D%E5%A2%9E/" itemprop="url" rel="index">
+                    <span itemprop="name">倍增</span>
+                  </a>
+                </span>
+            </span>
+
+          
+            <span id="/2020/04/10/%E9%A2%98%E8%A7%A3/51nod2883/" class="post-meta-item leancloud_visitors" data-flag-title="题解 51nod2883 城市" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2020/04/10/%E9%A2%98%E8%A7%A3/51nod2883/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/04/10/%E9%A2%98%E8%A7%A3/51nod2883/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="题解-51nod2883-城市"><a href="#题解-51nod2883-城市" class="headerlink" title="题解 51nod2883 城市"></a>题解 51nod2883 城市</h2><h3 id="题面"><a href="#题面" class="headerlink" title="题面"></a>题面</h3><p><a href="http://www.51nod.com/Challenge/Problem.html#problemId=2883" target="_blank" rel="noopener">51nod</a></p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/04/10/%E9%A2%98%E8%A7%A3/51nod2883/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/08/%E9%A2%98%E8%A7%A3/51nod2935/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/chen.jpg">
+      <meta itemprop="name" content="Hastin/zsq259">
+      <meta itemprop="description" content="一只小菜狗">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hastin">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/04/08/%E9%A2%98%E8%A7%A3/51nod2935/" class="post-title-link" itemprop="url">题解 51nod2935 土地划分</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-04-08 00:00:00 / 修改时间：23:24:33" itemprop="dateCreated datePublished" datetime="2020-04-08T00:00:00+08:00">2020-04-08</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/OI/" itemprop="url" rel="index">
+                    <span itemprop="name">OI</span>
+                  </a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/OI/%E5%9B%BE%E8%AE%BA/" itemprop="url" rel="index">
+                    <span itemprop="name">图论</span>
+                  </a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/OI/%E5%9B%BE%E8%AE%BA/%E7%BD%91%E7%BB%9C%E6%B5%81/" itemprop="url" rel="index">
+                    <span itemprop="name">网络流</span>
+                  </a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/OI/%E5%9B%BE%E8%AE%BA/%E7%BD%91%E7%BB%9C%E6%B5%81/%E6%9C%80%E5%B0%8F%E5%89%B2/" itemprop="url" rel="index">
+                    <span itemprop="name">最小割</span>
+                  </a>
+                </span>
+            </span>
+
+          
+            <span id="/2020/04/08/%E9%A2%98%E8%A7%A3/51nod2935/" class="post-meta-item leancloud_visitors" data-flag-title="题解 51nod2935 土地划分" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2020/04/08/%E9%A2%98%E8%A7%A3/51nod2935/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/04/08/%E9%A2%98%E8%A7%A3/51nod2935/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="题解-51nod2935-土地划分"><a href="#题解-51nod2935-土地划分" class="headerlink" title="题解 51nod2935 土地划分"></a>题解 51nod2935 土地划分</h2><h3 id="题面"><a href="#题面" class="headerlink" title="题面"></a>题面</h3><p><a href="http://www.51nod.com/Challenge/Problem.html#problemId=2935" target="_blank" rel="noopener">51nod</a></p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/04/08/%E9%A2%98%E8%A7%A3/51nod2935/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/04/%E9%A2%98%E8%A7%A3/51nod2564/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/chen.jpg">
+      <meta itemprop="name" content="Hastin/zsq259">
+      <meta itemprop="description" content="一只小菜狗">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hastin">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/04/04/%E9%A2%98%E8%A7%A3/51nod2564/" class="post-title-link" itemprop="url">题解51nod2564 格子染色</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-04-04 00:00:00 / 修改时间：17:43:15" itemprop="dateCreated datePublished" datetime="2020-04-04T00:00:00+08:00">2020-04-04</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/OI/" itemprop="url" rel="index">
+                    <span itemprop="name">OI</span>
+                  </a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/OI/%E5%9B%BE%E8%AE%BA/" itemprop="url" rel="index">
+                    <span itemprop="name">图论</span>
+                  </a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/OI/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" itemprop="url" rel="index">
+                    <span itemprop="name">数据结构</span>
+                  </a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/OI/%E5%9B%BE%E8%AE%BA/%E7%BD%91%E7%BB%9C%E6%B5%81/" itemprop="url" rel="index">
+                    <span itemprop="name">网络流</span>
+                  </a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/OI/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%8F%AF%E6%8C%81%E4%B9%85%E5%8C%96%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" itemprop="url" rel="index">
+                    <span itemprop="name">可持久化数据结构</span>
+                  </a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/OI/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%8F%AF%E6%8C%81%E4%B9%85%E5%8C%96%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%8F%AF%E6%8C%81%E4%B9%85%E5%8C%96%E7%BA%BF%E6%AE%B5%E6%A0%91/" itemprop="url" rel="index">
+                    <span itemprop="name">可持久化线段树</span>
+                  </a>
+                </span>
+            </span>
+
+          
+            <span id="/2020/04/04/%E9%A2%98%E8%A7%A3/51nod2564/" class="post-meta-item leancloud_visitors" data-flag-title="题解51nod2564 格子染色" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2020/04/04/%E9%A2%98%E8%A7%A3/51nod2564/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/04/04/%E9%A2%98%E8%A7%A3/51nod2564/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="题解51nod2564-格子染色"><a href="#题解51nod2564-格子染色" class="headerlink" title="题解51nod2564 格子染色"></a>题解51nod2564 格子染色</h2><h3 id="题面"><a href="#题面" class="headerlink" title="题面"></a>题面</h3><p><a href="http://www.51nod.com/Challenge/Problem.html#problemId=2564" target="_blank" rel="noopener">51nod</a></p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/04/04/%E9%A2%98%E8%A7%A3/51nod2564/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/04/%E9%A2%98%E8%A7%A3/51nod2014/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/chen.jpg">
+      <meta itemprop="name" content="Hastin/zsq259">
+      <meta itemprop="description" content="一只小菜狗">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hastin">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/04/04/%E9%A2%98%E8%A7%A3/51nod2014/" class="post-title-link" itemprop="url">题解 51nod2014  小朋友的笑话</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-04-04 00:00:00 / 修改时间：11:43:44" itemprop="dateCreated datePublished" datetime="2020-04-04T00:00:00+08:00">2020-04-04</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/OI/" itemprop="url" rel="index">
+                    <span itemprop="name">OI</span>
+                  </a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/OI/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" itemprop="url" rel="index">
+                    <span itemprop="name">数据结构</span>
+                  </a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/OI/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%A0%91%E5%BD%A2%E7%BB%93%E6%9E%84/" itemprop="url" rel="index">
+                    <span itemprop="name">树形结构</span>
+                  </a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/OI/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%A0%91%E5%BD%A2%E7%BB%93%E6%9E%84/%E7%BA%BF%E6%AE%B5%E6%A0%91/" itemprop="url" rel="index">
+                    <span itemprop="name">线段树</span>
+                  </a>
+                </span>
+            </span>
+
+          
+            <span id="/2020/04/04/%E9%A2%98%E8%A7%A3/51nod2014/" class="post-meta-item leancloud_visitors" data-flag-title="题解 51nod2014  小朋友的笑话" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2020/04/04/%E9%A2%98%E8%A7%A3/51nod2014/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/04/04/%E9%A2%98%E8%A7%A3/51nod2014/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="题解-51nod2014-小朋友的笑话"><a href="#题解-51nod2014-小朋友的笑话" class="headerlink" title="题解 51nod2014  小朋友的笑话"></a>题解 51nod2014  小朋友的笑话</h2><h3 id="题面"><a href="#题面" class="headerlink" title="题面"></a>题面</h3><p><a href="http://www.51nod.com/Challenge/Problem.html#problemId=2014" target="_blank" rel="noopener">51nod</a></p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/04/04/%E9%A2%98%E8%A7%A3/51nod2014/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/04/%E9%A2%98%E8%A7%A3/51nod1984/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/chen.jpg">
+      <meta itemprop="name" content="Hastin/zsq259">
+      <meta itemprop="description" content="一只小菜狗">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hastin">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/04/04/%E9%A2%98%E8%A7%A3/51nod1984/" class="post-title-link" itemprop="url">题解 51nod1984 异或约数和</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-04-04 00:00:00 / 修改时间：11:26:11" itemprop="dateCreated datePublished" datetime="2020-04-04T00:00:00+08:00">2020-04-04</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -368,20 +862,14 @@
                 </span>
                   ，
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index">
-                    <span itemprop="name">学习笔记</span>
-                  </a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/OI/%E6%95%B0%E5%AD%A6/%E5%A4%9A%E9%A1%B9%E5%BC%8F/" itemprop="url" rel="index">
-                    <span itemprop="name">多项式</span>
+                  <a href="/categories/OI/%E6%95%B0%E5%AD%A6/%E6%95%B0%E8%AE%BA/" itemprop="url" rel="index">
+                    <span itemprop="name">数论</span>
                   </a>
                 </span>
             </span>
 
           
-            <span id="/2020/01/20/%E9%A2%98%E8%A7%A3/%E5%A4%9A%E9%A1%B9%E5%BC%8F/" class="post-meta-item leancloud_visitors" data-flag-title="学习笔记 多项式专题" title="阅读次数">
+            <span id="/2020/04/04/%E9%A2%98%E8%A7%A3/51nod1984/" class="post-meta-item leancloud_visitors" data-flag-title="题解 51nod1984 异或约数和" title="阅读次数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -396,8 +884,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2020/01/20/%E9%A2%98%E8%A7%A3/%E5%A4%9A%E9%A1%B9%E5%BC%8F/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/01/20/%E9%A2%98%E8%A7%A3/%E5%A4%9A%E9%A1%B9%E5%BC%8F/" itemprop="commentCount"></span>
+    <a title="valine" href="/2020/04/04/%E9%A2%98%E8%A7%A3/51nod1984/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/04/04/%E9%A2%98%E8%A7%A3/51nod1984/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -412,10 +900,10 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          毒瘤多项式
+          <h2 id="题解-51nod1984-异或约数和"><a href="#题解-51nod1984-异或约数和" class="headerlink" title="题解 51nod1984 异或约数和"></a>题解 51nod1984 异或约数和</h2><h3 id="题面"><a href="#题面" class="headerlink" title="题面"></a>题面</h3><p><a href="http://www.51nod.com/Challenge/Problem.html#problemId=1984" target="_blank" rel="noopener">51nod</a></p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2020/01/20/%E9%A2%98%E8%A7%A3/%E5%A4%9A%E9%A1%B9%E5%BC%8F/">
+              <a class="btn" href="/2020/04/04/%E9%A2%98%E8%A7%A3/51nod1984/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -439,7 +927,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/19/%E9%A2%98%E8%A7%A3/AGC024E/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/04/%E9%A2%98%E8%A7%A3/51nod1850/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/chen.jpg">
@@ -453,117 +941,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           
-            <a href="/2020/01/19/%E9%A2%98%E8%A7%A3/AGC024E/" class="post-title-link" itemprop="url">题解 AGC024E Sequence Growing Hard</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2020-01-19 00:00:00 / 修改时间：20:41:18" itemprop="dateCreated datePublished" datetime="2020-01-19T00:00:00+08:00">2020-01-19</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/OI/" itemprop="url" rel="index">
-                    <span itemprop="name">OI</span>
-                  </a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/OI/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" itemprop="url" rel="index">
-                    <span itemprop="name">动态规划</span>
-                  </a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/OI/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/%E8%AE%A1%E6%95%B0dp/" itemprop="url" rel="index">
-                    <span itemprop="name">计数dp</span>
-                  </a>
-                </span>
-            </span>
-
-          
-            <span id="/2020/01/19/%E9%A2%98%E8%A7%A3/AGC024E/" class="post-meta-item leancloud_visitors" data-flag-title="题解 AGC024E Sequence Growing Hard" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2020/01/19/%E9%A2%98%E8%A7%A3/AGC024E/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/01/19/%E9%A2%98%E8%A7%A3/AGC024E/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="题解-AGC024E-Sequence-Growing-Hard"><a href="#题解-AGC024E-Sequence-Growing-Hard" class="headerlink" title="题解 AGC024E Sequence Growing Hard"></a>题解 AGC024E Sequence Growing Hard</h2><h3 id="题面"><a href="#题面" class="headerlink" title="题面"></a>题面</h3><p><a href="https://agc024.contest.atcoder.jp/tasks/agc024_e" target="_blank" rel="noopener">AtCoder</a></p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/01/19/%E9%A2%98%E8%A7%A3/AGC024E/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/18/%E9%A2%98%E8%A7%A3/%E8%AE%A1%E6%95%B0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/chen.jpg">
-      <meta itemprop="name" content="Hastin/zsq259">
-      <meta itemprop="description" content="一只小菜狗">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hastin">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/01/18/%E9%A2%98%E8%A7%A3/%E8%AE%A1%E6%95%B0/" class="post-title-link" itemprop="url">学习笔记 计数专题</a>
+            <a href="/2020/04/04/%E9%A2%98%E8%A7%A3/51nod1850/" class="post-title-link" itemprop="url">题解 51nod 1850 抽卡大赛</a>
         </h1>
 
         <div class="post-meta">
@@ -573,14 +951,14 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2020-01-18 00:00:00" itemprop="dateCreated datePublished" datetime="2020-01-18T00:00:00+08:00">2020-01-18</time>
+              <time title="创建时间：2020-04-04 00:00:00" itemprop="dateCreated datePublished" datetime="2020-04-04T00:00:00+08:00">2020-04-04</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-01-20 14:03:01" itemprop="dateModified" datetime="2020-01-20T14:03:01+08:00">2020-01-20</time>
+                <time title="修改时间：2020-04-06 12:32:13" itemprop="dateModified" datetime="2020-04-06T12:32:13+08:00">2020-04-06</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -606,26 +984,20 @@
                 </span>
                   ，
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index">
-                    <span itemprop="name">学习笔记</span>
+                  <a href="/categories/OI/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/%E7%BA%BF%E6%80%A7dp/" itemprop="url" rel="index">
+                    <span itemprop="name">线性dp</span>
                   </a>
                 </span>
                   ，
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/OI/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/%E8%AE%A1%E6%95%B0dp/" itemprop="url" rel="index">
-                    <span itemprop="name">计数dp</span>
-                  </a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/OI/%E6%95%B0%E5%AD%A6/%E7%BB%84%E5%90%88%E8%AE%A1%E6%95%B0/" itemprop="url" rel="index">
-                    <span itemprop="name">组合计数</span>
+                  <a href="/categories/OI/%E6%95%B0%E5%AD%A6/%E6%A6%82%E7%8E%87-%E6%9C%9F%E6%9C%9B/" itemprop="url" rel="index">
+                    <span itemprop="name">概率&期望</span>
                   </a>
                 </span>
             </span>
 
           
-            <span id="/2020/01/18/%E9%A2%98%E8%A7%A3/%E8%AE%A1%E6%95%B0/" class="post-meta-item leancloud_visitors" data-flag-title="学习笔记 计数专题" title="阅读次数">
+            <span id="/2020/04/04/%E9%A2%98%E8%A7%A3/51nod1850/" class="post-meta-item leancloud_visitors" data-flag-title="题解 51nod 1850 抽卡大赛" title="阅读次数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -640,8 +1012,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2020/01/18/%E9%A2%98%E8%A7%A3/%E8%AE%A1%E6%95%B0/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/01/18/%E9%A2%98%E8%A7%A3/%E8%AE%A1%E6%95%B0/" itemprop="commentCount"></span>
+    <a title="valine" href="/2020/04/04/%E9%A2%98%E8%A7%A3/51nod1850/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/04/04/%E9%A2%98%E8%A7%A3/51nod1850/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -656,10 +1028,10 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          关于计数的一点东西
+          <h2 id="题解-51nod-1850-抽卡大赛"><a href="#题解-51nod-1850-抽卡大赛" class="headerlink" title="题解 51nod 1850 抽卡大赛"></a>题解 51nod 1850 抽卡大赛</h2><h3 id="题面"><a href="#题面" class="headerlink" title="题面"></a>题面</h3><p><a href="http://www.51nod.com/Challenge/Problem.html#problemId=1850" target="_blank" rel="noopener">51nod</a></p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2020/01/18/%E9%A2%98%E8%A7%A3/%E8%AE%A1%E6%95%B0/">
+              <a class="btn" href="/2020/04/04/%E9%A2%98%E8%A7%A3/51nod1850/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -683,7 +1055,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/18/%E9%A2%98%E8%A7%A3/AGC013D/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/27/%E9%A2%98%E8%A7%A3/51nod2558/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/chen.jpg">
@@ -697,7 +1069,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           
-            <a href="/2020/01/18/%E9%A2%98%E8%A7%A3/AGC013D/" class="post-title-link" itemprop="url">题解 AGC013D PilingUp</a>
+            <a href="/2020/03/27/%E9%A2%98%E8%A7%A3/51nod2558/" class="post-title-link" itemprop="url">题解 51nod2558 选址</a>
         </h1>
 
         <div class="post-meta">
@@ -708,7 +1080,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-01-18 00:00:00 / 修改时间：21:34:53" itemprop="dateCreated datePublished" datetime="2020-01-18T00:00:00+08:00">2020-01-18</time>
+              <time title="创建时间：2020-03-27 00:00:00 / 修改时间：22:50:35" itemprop="dateCreated datePublished" datetime="2020-03-27T00:00:00+08:00">2020-03-27</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -722,20 +1094,20 @@
                 </span>
                   ，
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/OI/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" itemprop="url" rel="index">
-                    <span itemprop="name">动态规划</span>
+                  <a href="/categories/OI/%E5%9B%BE%E8%AE%BA/" itemprop="url" rel="index">
+                    <span itemprop="name">图论</span>
                   </a>
                 </span>
                   ，
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/OI/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/%E8%AE%A1%E6%95%B0dp/" itemprop="url" rel="index">
-                    <span itemprop="name">计数dp</span>
+                  <a href="/categories/OI/%E5%9B%BE%E8%AE%BA/%E6%9C%80%E7%9F%AD%E8%B7%AF/" itemprop="url" rel="index">
+                    <span itemprop="name">最短路</span>
                   </a>
                 </span>
             </span>
 
           
-            <span id="/2020/01/18/%E9%A2%98%E8%A7%A3/AGC013D/" class="post-meta-item leancloud_visitors" data-flag-title="题解 AGC013D PilingUp" title="阅读次数">
+            <span id="/2020/03/27/%E9%A2%98%E8%A7%A3/51nod2558/" class="post-meta-item leancloud_visitors" data-flag-title="题解 51nod2558 选址" title="阅读次数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -750,8 +1122,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2020/01/18/%E9%A2%98%E8%A7%A3/AGC013D/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/01/18/%E9%A2%98%E8%A7%A3/AGC013D/" itemprop="commentCount"></span>
+    <a title="valine" href="/2020/03/27/%E9%A2%98%E8%A7%A3/51nod2558/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/03/27/%E9%A2%98%E8%A7%A3/51nod2558/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -766,11 +1138,10 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="题解-AGC013D-PilingUp"><a href="#题解-AGC013D-PilingUp" class="headerlink" title="题解 AGC013D PilingUp"></a>题解 AGC013D PilingUp</h2><h3 id="题面"><a href="#题面" class="headerlink" title="题面"></a>题面</h3><p><a href="https://www.luogu.com.cn/problem/AT2370" target="_blank" rel="noopener">洛谷</a></p>
-<p><a href="https://agc013.contest.atcoder.jp/tasks/agc013_d" target="_blank" rel="noopener">AtCoder</a></p>
+          <h2 id="题解-51nod2558-选址"><a href="#题解-51nod2558-选址" class="headerlink" title="题解 51nod2558 选址"></a>题解 51nod2558 选址</h2><h3 id="题面"><a href="#题面" class="headerlink" title="题面"></a>题面</h3><p><a href="http://www.51nod.com/Challenge/Problem.html#problemId=2558" target="_blank" rel="noopener">51nod</a></p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2020/01/18/%E9%A2%98%E8%A7%A3/AGC013D/#more" rel="contents">
+              <a class="btn" href="/2020/03/27/%E9%A2%98%E8%A7%A3/51nod2558/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -794,7 +1165,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/18/%E9%A2%98%E8%A7%A3/BZOJ2169/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/22/%E9%A2%98%E8%A7%A3/51nod1693/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/chen.jpg">
@@ -808,7 +1179,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           
-            <a href="/2020/01/18/%E9%A2%98%E8%A7%A3/BZOJ2169/" class="post-title-link" itemprop="url">题解 BZOJ2169 连边</a>
+            <a href="/2020/03/22/%E9%A2%98%E8%A7%A3/51nod1693/" class="post-title-link" itemprop="url">题解 51nod1693 水群</a>
         </h1>
 
         <div class="post-meta">
@@ -819,7 +1190,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-01-18 00:00:00 / 修改时间：20:11:31" itemprop="dateCreated datePublished" datetime="2020-01-18T00:00:00+08:00">2020-01-18</time>
+              <time title="创建时间：2020-03-22 00:00:00 / 修改时间：11:04:56" itemprop="dateCreated datePublished" datetime="2020-03-22T00:00:00+08:00">2020-03-22</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -833,20 +1204,20 @@
                 </span>
                   ，
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/OI/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" itemprop="url" rel="index">
-                    <span itemprop="name">动态规划</span>
+                  <a href="/categories/OI/%E5%9B%BE%E8%AE%BA/" itemprop="url" rel="index">
+                    <span itemprop="name">图论</span>
                   </a>
                 </span>
                   ，
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/OI/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/%E8%AE%A1%E6%95%B0dp/" itemprop="url" rel="index">
-                    <span itemprop="name">计数dp</span>
+                  <a href="/categories/OI/%E5%9B%BE%E8%AE%BA/%E6%9C%80%E7%9F%AD%E8%B7%AF/" itemprop="url" rel="index">
+                    <span itemprop="name">最短路</span>
                   </a>
                 </span>
             </span>
 
           
-            <span id="/2020/01/18/%E9%A2%98%E8%A7%A3/BZOJ2169/" class="post-meta-item leancloud_visitors" data-flag-title="题解 BZOJ2169 连边" title="阅读次数">
+            <span id="/2020/03/22/%E9%A2%98%E8%A7%A3/51nod1693/" class="post-meta-item leancloud_visitors" data-flag-title="题解 51nod1693 水群" title="阅读次数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -861,8 +1232,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2020/01/18/%E9%A2%98%E8%A7%A3/BZOJ2169/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/01/18/%E9%A2%98%E8%A7%A3/BZOJ2169/" itemprop="commentCount"></span>
+    <a title="valine" href="/2020/03/22/%E9%A2%98%E8%A7%A3/51nod1693/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/03/22/%E9%A2%98%E8%A7%A3/51nod1693/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -877,10 +1248,10 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="题解-BZOJ2169-连边"><a href="#题解-BZOJ2169-连边" class="headerlink" title="题解 BZOJ2169 连边"></a>题解 BZOJ2169 连边</h2><h3 id="题面"><a href="#题面" class="headerlink" title="题面"></a>题面</h3><p><a href="https://www.lydsy.com/JudgeOnline/problem.php?id=2169" target="_blank" rel="noopener">BZOJ</a></p>
+          <h2 id="题解-51nod1693-水群"><a href="#题解-51nod1693-水群" class="headerlink" title="题解 51nod1693 水群"></a>题解 51nod1693 水群</h2><h3 id="题面"><a href="#题面" class="headerlink" title="题面"></a>题面</h3><p><a href="http://www.51nod.com/Challenge/Problem.html#problemId=1693" target="_blank" rel="noopener">51nod</a></p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2020/01/18/%E9%A2%98%E8%A7%A3/BZOJ2169/#more" rel="contents">
+              <a class="btn" href="/2020/03/22/%E9%A2%98%E8%A7%A3/51nod1693/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -904,7 +1275,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/18/%E9%A2%98%E8%A7%A3/%E6%B4%9B%E8%B0%B73687/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/22/%E9%A2%98%E8%A7%A3/51nod1192/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/chen.jpg">
@@ -918,7 +1289,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           
-            <a href="/2020/01/18/%E9%A2%98%E8%A7%A3/%E6%B4%9B%E8%B0%B73687/" class="post-title-link" itemprop="url">题解 ZJOI2017 仙人掌</a>
+            <a href="/2020/03/22/%E9%A2%98%E8%A7%A3/51nod1192/" class="post-title-link" itemprop="url">题解 51nod1192 Gcd表中的质数</a>
         </h1>
 
         <div class="post-meta">
@@ -929,233 +1300,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-01-18 00:00:00 / 修改时间：09:00:32" itemprop="dateCreated datePublished" datetime="2020-01-18T00:00:00+08:00">2020-01-18</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/OI/" itemprop="url" rel="index">
-                    <span itemprop="name">OI</span>
-                  </a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/OI/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" itemprop="url" rel="index">
-                    <span itemprop="name">动态规划</span>
-                  </a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/OI/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/%E6%A0%91%E5%BD%A2dp/" itemprop="url" rel="index">
-                    <span itemprop="name">树形dp</span>
-                  </a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/OI/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/%E8%AE%A1%E6%95%B0dp/" itemprop="url" rel="index">
-                    <span itemprop="name">计数dp</span>
-                  </a>
-                </span>
-            </span>
-
-          
-            <span id="/2020/01/18/%E9%A2%98%E8%A7%A3/%E6%B4%9B%E8%B0%B73687/" class="post-meta-item leancloud_visitors" data-flag-title="题解 ZJOI2017 仙人掌" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2020/01/18/%E9%A2%98%E8%A7%A3/%E6%B4%9B%E8%B0%B73687/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/01/18/%E9%A2%98%E8%A7%A3/%E6%B4%9B%E8%B0%B73687/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="题解-ZJOI2017-仙人掌"><a href="#题解-ZJOI2017-仙人掌" class="headerlink" title="题解 ZJOI2017 仙人掌"></a>题解 ZJOI2017 仙人掌</h2><h3 id="题面"><a href="#题面" class="headerlink" title="题面"></a>题面</h3><p><a href="https://www.luogu.com.cn/problem/P3687" target="_blank" rel="noopener">洛谷</a></p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/01/18/%E9%A2%98%E8%A7%A3/%E6%B4%9B%E8%B0%B73687/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/17/%E9%A2%98%E8%A7%A3/AT2062/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/chen.jpg">
-      <meta itemprop="name" content="Hastin/zsq259">
-      <meta itemprop="description" content="一只小菜狗">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hastin">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/01/17/%E9%A2%98%E8%A7%A3/AT2062/" class="post-title-link" itemprop="url">题解 AT2062 ~K Perm Counting</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2020-01-17 00:00:00 / 修改时间：22:36:28" itemprop="dateCreated datePublished" datetime="2020-01-17T00:00:00+08:00">2020-01-17</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/OI/" itemprop="url" rel="index">
-                    <span itemprop="name">OI</span>
-                  </a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/OI/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" itemprop="url" rel="index">
-                    <span itemprop="name">动态规划</span>
-                  </a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/OI/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/%E8%AE%A1%E6%95%B0dp/" itemprop="url" rel="index">
-                    <span itemprop="name">计数dp</span>
-                  </a>
-                </span>
-            </span>
-
-          
-            <span id="/2020/01/17/%E9%A2%98%E8%A7%A3/AT2062/" class="post-meta-item leancloud_visitors" data-flag-title="题解 AT2062 ~K Perm Counting" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2020/01/17/%E9%A2%98%E8%A7%A3/AT2062/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/01/17/%E9%A2%98%E8%A7%A3/AT2062/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="题解-AT2062-K-Perm-Counting"><a href="#题解-AT2062-K-Perm-Counting" class="headerlink" title="题解 AT2062 ~K Perm Counting"></a>题解 AT2062 ~K Perm Counting</h3><h3 id="题面"><a href="#题面" class="headerlink" title="题面"></a>题面</h3><p><a href="https://www.luogu.com.cn/problem/AT2062" target="_blank" rel="noopener">洛谷</a></p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/01/17/%E9%A2%98%E8%A7%A3/AT2062/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/17/%E9%A2%98%E8%A7%A3/CNTDSETS/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/chen.jpg">
-      <meta itemprop="name" content="Hastin/zsq259">
-      <meta itemprop="description" content="一只小菜狗">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hastin">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/01/17/%E9%A2%98%E8%A7%A3/CNTDSETS/" class="post-title-link" itemprop="url">题解 codechef CNTDSETS</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2020-01-17 00:00:00 / 修改时间：22:36:28" itemprop="dateCreated datePublished" datetime="2020-01-17T00:00:00+08:00">2020-01-17</time>
+              <time title="创建时间：2020-03-22 00:00:00 / 修改时间：10:33:43" itemprop="dateCreated datePublished" datetime="2020-03-22T00:00:00+08:00">2020-03-22</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1175,14 +1320,14 @@
                 </span>
                   ，
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/OI/%E6%95%B0%E5%AD%A6/%E7%BB%84%E5%90%88%E8%AE%A1%E6%95%B0/" itemprop="url" rel="index">
-                    <span itemprop="name">组合计数</span>
+                  <a href="/categories/OI/%E6%95%B0%E5%AD%A6/%E6%95%B0%E8%AE%BA/" itemprop="url" rel="index">
+                    <span itemprop="name">数论</span>
                   </a>
                 </span>
             </span>
 
           
-            <span id="/2020/01/17/%E9%A2%98%E8%A7%A3/CNTDSETS/" class="post-meta-item leancloud_visitors" data-flag-title="题解 codechef CNTDSETS" title="阅读次数">
+            <span id="/2020/03/22/%E9%A2%98%E8%A7%A3/51nod1192/" class="post-meta-item leancloud_visitors" data-flag-title="题解 51nod1192 Gcd表中的质数" title="阅读次数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -1197,8 +1342,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2020/01/17/%E9%A2%98%E8%A7%A3/CNTDSETS/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/01/17/%E9%A2%98%E8%A7%A3/CNTDSETS/" itemprop="commentCount"></span>
+    <a title="valine" href="/2020/03/22/%E9%A2%98%E8%A7%A3/51nod1192/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/03/22/%E9%A2%98%E8%A7%A3/51nod1192/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -1213,120 +1358,10 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="题解-codechef-CNTDSETS"><a href="#题解-codechef-CNTDSETS" class="headerlink" title="题解 codechef CNTDSETS"></a>题解 codechef CNTDSETS</h2><h3 id="题面"><a href="#题面" class="headerlink" title="题面"></a>题面</h3><p><a href="https://www.codechef.com/problems/CNTDSETS" target="_blank" rel="noopener">codechef</a></p>
+          <h2 id="题解-51nod1192-Gcd表中的质数"><a href="#题解-51nod1192-Gcd表中的质数" class="headerlink" title="题解 51nod1192 Gcd表中的质数"></a>题解 51nod1192 Gcd表中的质数</h2><h3 id="题面"><a href="#题面" class="headerlink" title="题面"></a>题面</h3><p><a href="http://www.51nod.com/Challenge/Problem.html#problemId=1192" target="_blank" rel="noopener">51nod</a></p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2020/01/17/%E9%A2%98%E8%A7%A3/CNTDSETS/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/17/%E9%A2%98%E8%A7%A3/51nod1597/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/chen.jpg">
-      <meta itemprop="name" content="Hastin/zsq259">
-      <meta itemprop="description" content="一只小菜狗">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hastin">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/01/17/%E9%A2%98%E8%A7%A3/51nod1597/" class="post-title-link" itemprop="url">题解 51nod1597 有限背包计数问题</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2020-01-17 00:00:00 / 修改时间：22:36:28" itemprop="dateCreated datePublished" datetime="2020-01-17T00:00:00+08:00">2020-01-17</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/OI/" itemprop="url" rel="index">
-                    <span itemprop="name">OI</span>
-                  </a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/OI/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" itemprop="url" rel="index">
-                    <span itemprop="name">动态规划</span>
-                  </a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/OI/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/%E8%AE%A1%E6%95%B0DP/" itemprop="url" rel="index">
-                    <span itemprop="name">计数DP</span>
-                  </a>
-                </span>
-            </span>
-
-          
-            <span id="/2020/01/17/%E9%A2%98%E8%A7%A3/51nod1597/" class="post-meta-item leancloud_visitors" data-flag-title="题解 51nod1597 有限背包计数问题" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2020/01/17/%E9%A2%98%E8%A7%A3/51nod1597/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/01/17/%E9%A2%98%E8%A7%A3/51nod1597/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="题解-51nod1597-有限背包计数问题"><a href="#题解-51nod1597-有限背包计数问题" class="headerlink" title="题解 51nod1597 有限背包计数问题"></a>题解 51nod1597 有限背包计数问题</h2><h3 id="题面"><a href="#题面" class="headerlink" title="题面"></a>题面</h3><p><a href="http://www.51nod.com/Challenge/Problem.html#problemId=1597" target="_blank" rel="noopener">51nod</a></p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/01/17/%E9%A2%98%E8%A7%A3/51nod1597/#more" rel="contents">
+              <a class="btn" href="/2020/03/22/%E9%A2%98%E8%A7%A3/51nod1192/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -1350,7 +1385,7 @@
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -1419,16 +1454,16 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">27</span>
+          <span class="site-state-item-count">106</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
-        <span class="site-state-item-count">22</span>
+        <span class="site-state-item-count">78</span>
         <span class="site-state-item-name">分类</span>
       </div>
       <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">13</span>
+        <span class="site-state-item-count">58</span>
         <span class="site-state-item-name">标签</span>
       </div>
   </nav>
