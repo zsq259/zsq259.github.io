@@ -8,15 +8,132 @@
 @font-face {
  font-family: 'JetBrains Mono';
  src: local('JetBrains Mono'), url('/font/JetBrainsMono-Regular.woff2') format('woff2');
-}</style><meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="Hastin" type="application/atom+xml">
+}</style><meta name="generator" content="Hexo 4.2.0"><style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"] > svg a {
+  fill: blue;
+  stroke: blue;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style><link rel="alternate" href="/atom.xml" title="Hastin" type="application/atom+xml">
 </head><body><header><nav><a href="/">home</a><a href="/about/">about</a><a href="/tags/">tags</a><a href="/categories/">categories</a><a href="/top/">top</a><a href="/archives/">archives</a><a href="/links/">友链</a></nav></header><main style="flex-direction: row-reverse"><article><div id="post-bg"><div id="post-title"><div id="post-info"><span>date:<time datetime="2020-02-07T16:00:00.000Z" id="date"> 2020-02-08</time></span><br><span>updated:<time datetime="2020-02-08T10:29:28.000Z" id="updated"> 2020-02-08</time></span></div><h1>题解 JSOI2014 序列维护</h1><hr></div><div id="post-content"><h2 id="题解-JSOI2014-序列维护"><a href="#题解-JSOI2014-序列维护" class="headerlink" title="题解 JSOI2014 序列维护"></a>题解 JSOI2014 序列维护</h2><h3 id="题面"><a href="#题面" class="headerlink" title="题面"></a>题面</h3><p><a href="https://www.lydsy.com/JudgeOnline/problem.php?id=5039" target="_blank" rel="noopener">BZOJ</a></p>
 <a id="more"></a>
 <h3 id="个人体会"><a href="#个人体会" class="headerlink" title="个人体会"></a>个人体会</h3><p>一道自己写出来的题!</p>
 <p><del>不过是**题而已..</del></p>
 <h3 id="解析"><a href="#解析" class="headerlink" title="解析"></a>解析</h3><p>线段树2板子…</p>
 <p><del>没了</del></p>
-<h3 id="code"><a href="#code" class="headerlink" title="code"></a>code</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> ls(a) a&lt;&lt;1</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> rs(a) a&lt;&lt;1|1</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> ll long long</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> filein(a) freopen(a<span class="meta-string">".cpp"</span>,<span class="meta-string">"r"</span>,stdin)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> fileout(a) freopen(a<span class="meta-string">".cpp"</span>,<span class="meta-string">"w"</span>,stdout);</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">read</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> sum=<span class="number">0</span>,f=<span class="number">1</span>;<span class="keyword">char</span> c=getchar();</span><br><span class="line">	<span class="keyword">while</span>((c&lt;<span class="string">'0'</span>||c&gt;<span class="string">'9'</span>)&amp;&amp;c!=EOF)&#123;<span class="keyword">if</span>(c==<span class="string">'-'</span>) f=<span class="number">-1</span>;c=getchar();&#125;</span><br><span class="line">	<span class="keyword">while</span>(c&gt;=<span class="string">'0'</span>&amp;&amp;c&lt;=<span class="string">'9'</span>&amp;&amp;c!=EOF)&#123;sum=sum*<span class="number">10</span>+c-<span class="string">'0'</span>;c=getchar();&#125;</span><br><span class="line">	<span class="keyword">return</span> sum*f;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N=<span class="number">100005</span>;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">tree</span>&#123;</span>ll sum,k1,k2;<span class="keyword">int</span> l,r;&#125;t[N&lt;&lt;<span class="number">2</span>];</span><br><span class="line"><span class="keyword">int</span> n,Mod,a[N],Q;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">update</span><span class="params">(<span class="keyword">int</span> p,ll k1,ll k2)</span></span>&#123;</span><br><span class="line">	t[p].k1=t[p].k1*k1%Mod;</span><br><span class="line">	t[p].k2=(t[p].k2*k1%Mod+k2)%Mod;</span><br><span class="line">	t[p].sum=(t[p].sum*k1+k2*(t[p].r-t[p].l+<span class="number">1</span>))%Mod;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">pushup</span><span class="params">(<span class="keyword">int</span> p)</span></span>&#123;</span><br><span class="line">	t[p].sum=(t[ls(p)].sum+t[rs(p)].sum)%Mod;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">pushdown</span><span class="params">(<span class="keyword">int</span> p)</span></span>&#123;</span><br><span class="line">	update(ls(p),t[p].k1,t[p].k2);</span><br><span class="line">	update(rs(p),t[p].k1,t[p].k2);</span><br><span class="line">	t[p].k1=<span class="number">1</span>;t[p].k2=<span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">build</span><span class="params">(<span class="keyword">int</span> p,<span class="keyword">int</span> l,<span class="keyword">int</span> r)</span></span>&#123;</span><br><span class="line">	t[p].l=l;t[p].r=r;t[p].k1=<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">if</span>(l==r)&#123;t[p].sum=a[l]%Mod;<span class="keyword">return</span> ;&#125;</span><br><span class="line">	<span class="keyword">int</span> mid=(l+r)&gt;&gt;<span class="number">1</span>;</span><br><span class="line">	build(ls(p),l,mid);build(rs(p),mid+<span class="number">1</span>,r);</span><br><span class="line">	pushup(p);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">change</span><span class="params">(<span class="keyword">int</span> p,<span class="keyword">int</span> l,<span class="keyword">int</span> r,ll k1,ll k2)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(t[p].l&gt;=l&amp;&amp;t[p].r&lt;=r)&#123;</span><br><span class="line">		t[p].k1=t[p].k1*k1%Mod;</span><br><span class="line">		t[p].k2=(t[p].k2*k1+k2)%Mod;</span><br><span class="line">		t[p].sum=(t[p].sum*k1+k2*(t[p].r-t[p].l+<span class="number">1</span>))%Mod;</span><br><span class="line">		<span class="keyword">return</span> ;		</span><br><span class="line">	&#125;</span><br><span class="line">	pushdown(p);</span><br><span class="line">	<span class="keyword">int</span> mid=(t[p].l+t[p].r)&gt;&gt;<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">if</span>(l&lt;=mid) change(ls(p),l,r,k1,k2);</span><br><span class="line">	<span class="keyword">if</span>(r&gt;mid) change(rs(p),l,r,k1,k2);</span><br><span class="line">	pushup(p);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">inline</span> ll <span class="title">query</span><span class="params">(<span class="keyword">int</span> p,<span class="keyword">int</span> l,<span class="keyword">int</span> r)</span></span>&#123;	</span><br><span class="line">	<span class="keyword">if</span>(t[p].l&gt;=l&amp;&amp;t[p].r&lt;=r) <span class="keyword">return</span> t[p].sum;</span><br><span class="line">	pushdown(p);</span><br><span class="line">	<span class="keyword">int</span> mid=(t[p].l+t[p].r)&gt;&gt;<span class="number">1</span>;ll ret=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">if</span>(l&lt;=mid) ret=(ret+query(ls(p),l,r))%Mod;</span><br><span class="line">	<span class="keyword">if</span>(r&gt;mid) ret=(ret+query(rs(p),l,r))%Mod;</span><br><span class="line">	pushup(p);</span><br><span class="line">	<span class="keyword">return</span> ret;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">signed</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	n=read();Mod=read();</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) a[i]=read();</span><br><span class="line">	build(<span class="number">1</span>,<span class="number">1</span>,n);Q=read();</span><br><span class="line">	<span class="keyword">while</span>(Q--)&#123;</span><br><span class="line">		<span class="keyword">int</span> op=read(),l=read(),r=read();</span><br><span class="line">		<span class="keyword">if</span>(op==<span class="number">1</span>)&#123;<span class="keyword">int</span> x=read();change(<span class="number">1</span>,l,r,x,<span class="number">0</span>);&#125;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span>(op==<span class="number">2</span>)&#123;<span class="keyword">int</span> x=read();change(<span class="number">1</span>,l,r,<span class="number">1</span>,x);&#125;</span><br><span class="line">		<span class="keyword">else</span> <span class="built_in">printf</span>(<span class="string">"%lld\n"</span>,query(<span class="number">1</span>,l,r));</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<div id="paginator"></div></div><div id="post-footer"><hr><a href="/2020/02/08/%E9%A2%98%E8%A7%A3/BZOJ5038/">← Prev 题解 JSOI2014 打兔子</a><span style="color: #fe2"> | </span><a href="/2020/02/08/%E9%A2%98%E8%A7%A3/BZOJ5033/">题解 JSOI2014 强连通图 Next →</a><hr></div><div id="bottom-btn"><a id="to-index" href="#post-index" title="index">≡</a><a id="to-top" href="#post-title" title="to top">∧</a></div><details id="reward"><summary>打赏</summary><div id="alipay"><span>支付宝 | Alipay</span><br><img src="/img/Alipay.png"></div><div id="wechat"><span>微信 | WeChat</span><br><img src="/img/WeChat.png"></div></details><div id="Valine"></div><script>new Valine({
+<h3 id="code"><a href="#code" class="headerlink" title="code"></a>code</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;iostream&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;cstring&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> ls(a) a&lt;&lt;1</span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> rs(a) a&lt;&lt;1|1</span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> ll long long</span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> filein(a) freopen(a<span class="hljs-meta-string">".cpp"</span>,<span class="hljs-meta-string">"r"</span>,stdin)</span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> fileout(a) freopen(a<span class="hljs-meta-string">".cpp"</span>,<span class="hljs-meta-string">"w"</span>,stdout);</span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;<br><br><span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">int</span> <span class="hljs-title">read</span><span class="hljs-params">()</span></span>{<br>	<span class="hljs-keyword">int</span> sum=<span class="hljs-number">0</span>,f=<span class="hljs-number">1</span>;<span class="hljs-keyword">char</span> c=getchar();<br>	<span class="hljs-keyword">while</span>((c&lt;<span class="hljs-string">'0'</span>||c&gt;<span class="hljs-string">'9'</span>)&amp;&amp;c!=EOF){<span class="hljs-keyword">if</span>(c==<span class="hljs-string">'-'</span>) f=<span class="hljs-number">-1</span>;c=getchar();}<br>	<span class="hljs-keyword">while</span>(c&gt;=<span class="hljs-string">'0'</span>&amp;&amp;c&lt;=<span class="hljs-string">'9'</span>&amp;&amp;c!=EOF){sum=sum*<span class="hljs-number">10</span>+c-<span class="hljs-string">'0'</span>;c=getchar();}<br>	<span class="hljs-keyword">return</span> sum*f;<br>}<br><br><span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> N=<span class="hljs-number">100005</span>;<br><span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">tree</span>{</span>ll sum,k1,k2;<span class="hljs-keyword">int</span> l,r;}t[N&lt;&lt;<span class="hljs-number">2</span>];<br><span class="hljs-keyword">int</span> n,Mod,a[N],Q;<br><br><span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">update</span><span class="hljs-params">(<span class="hljs-keyword">int</span> p,ll k1,ll k2)</span></span>{<br>	t[p].k1=t[p].k1*k1%Mod;<br>	t[p].k2=(t[p].k2*k1%Mod+k2)%Mod;<br>	t[p].sum=(t[p].sum*k1+k2*(t[p].r-t[p].l+<span class="hljs-number">1</span>))%Mod;<br>}<br><br><span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">pushup</span><span class="hljs-params">(<span class="hljs-keyword">int</span> p)</span></span>{<br>	t[p].sum=(t[ls(p)].sum+t[rs(p)].sum)%Mod;<br>}<br><br><span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">pushdown</span><span class="hljs-params">(<span class="hljs-keyword">int</span> p)</span></span>{<br>	update(ls(p),t[p].k1,t[p].k2);<br>	update(rs(p),t[p].k1,t[p].k2);<br>	t[p].k1=<span class="hljs-number">1</span>;t[p].k2=<span class="hljs-number">0</span>;<br>}<br><br><span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">build</span><span class="hljs-params">(<span class="hljs-keyword">int</span> p,<span class="hljs-keyword">int</span> l,<span class="hljs-keyword">int</span> r)</span></span>{<br>	t[p].l=l;t[p].r=r;t[p].k1=<span class="hljs-number">1</span>;<br>	<span class="hljs-keyword">if</span>(l==r){t[p].sum=a[l]%Mod;<span class="hljs-keyword">return</span> ;}<br>	<span class="hljs-keyword">int</span> mid=(l+r)&gt;&gt;<span class="hljs-number">1</span>;<br>	build(ls(p),l,mid);build(rs(p),mid+<span class="hljs-number">1</span>,r);<br>	pushup(p);<br>}<br><br><span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">change</span><span class="hljs-params">(<span class="hljs-keyword">int</span> p,<span class="hljs-keyword">int</span> l,<span class="hljs-keyword">int</span> r,ll k1,ll k2)</span></span>{<br>	<span class="hljs-keyword">if</span>(t[p].l&gt;=l&amp;&amp;t[p].r&lt;=r){<br>		t[p].k1=t[p].k1*k1%Mod;<br>		t[p].k2=(t[p].k2*k1+k2)%Mod;<br>		t[p].sum=(t[p].sum*k1+k2*(t[p].r-t[p].l+<span class="hljs-number">1</span>))%Mod;<br>		<span class="hljs-keyword">return</span> ;		<br>	}<br>	pushdown(p);<br>	<span class="hljs-keyword">int</span> mid=(t[p].l+t[p].r)&gt;&gt;<span class="hljs-number">1</span>;<br>	<span class="hljs-keyword">if</span>(l&lt;=mid) change(ls(p),l,r,k1,k2);<br>	<span class="hljs-keyword">if</span>(r&gt;mid) change(rs(p),l,r,k1,k2);<br>	pushup(p);<br>}<br><br><span class="hljs-function"><span class="hljs-keyword">inline</span> ll <span class="hljs-title">query</span><span class="hljs-params">(<span class="hljs-keyword">int</span> p,<span class="hljs-keyword">int</span> l,<span class="hljs-keyword">int</span> r)</span></span>{	<br>	<span class="hljs-keyword">if</span>(t[p].l&gt;=l&amp;&amp;t[p].r&lt;=r) <span class="hljs-keyword">return</span> t[p].sum;<br>	pushdown(p);<br>	<span class="hljs-keyword">int</span> mid=(t[p].l+t[p].r)&gt;&gt;<span class="hljs-number">1</span>;ll ret=<span class="hljs-number">0</span>;<br>	<span class="hljs-keyword">if</span>(l&lt;=mid) ret=(ret+query(ls(p),l,r))%Mod;<br>	<span class="hljs-keyword">if</span>(r&gt;mid) ret=(ret+query(rs(p),l,r))%Mod;<br>	pushup(p);<br>	<span class="hljs-keyword">return</span> ret;<br>}<br><br><span class="hljs-function"><span class="hljs-keyword">signed</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>{<br>	n=read();Mod=read();<br>	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">1</span>;i&lt;=n;i++) a[i]=read();<br>	build(<span class="hljs-number">1</span>,<span class="hljs-number">1</span>,n);Q=read();<br>	<span class="hljs-keyword">while</span>(Q--){<br>		<span class="hljs-keyword">int</span> op=read(),l=read(),r=read();<br>		<span class="hljs-keyword">if</span>(op==<span class="hljs-number">1</span>){<span class="hljs-keyword">int</span> x=read();change(<span class="hljs-number">1</span>,l,r,x,<span class="hljs-number">0</span>);}<br>		<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(op==<span class="hljs-number">2</span>){<span class="hljs-keyword">int</span> x=read();change(<span class="hljs-number">1</span>,l,r,<span class="hljs-number">1</span>,x);}<br>		<span class="hljs-keyword">else</span> <span class="hljs-built_in">printf</span>(<span class="hljs-string">"%lld\n"</span>,query(<span class="hljs-number">1</span>,l,r));<br>	}<br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>}<br></code></pre></td></tr></table></figure>
+<div id="paginator"></div></div><div id="post-footer"><hr><a href="/2020/02/08/%E9%A2%98%E8%A7%A3/BZOJ5173/">← Prev 题解 JSOI2014 矩形并</a><span style="color: #fe2"> | </span><a href="/2020/02/04/%E9%A2%98%E8%A7%A3/BZOJ4327/">题解 JSOI2012 玄武密码 Next →</a><hr></div><div id="bottom-btn"><a id="to-index" href="#post-index" title="index">≡</a><a id="to-top" href="#post-title" title="to top">∧</a></div><details id="reward"><summary>打赏</summary><div id="alipay"><span>支付宝 | Alipay</span><br><img src="/img/Alipay.png"></div><div id="wechat"><span>微信 | WeChat</span><br><img src="/img/WeChat.png"></div></details><div id="Valine"></div><script>new Valine({
  el: '#Valine'
  , appId: '3S6F0TepEoFzq3d7RDybPECM-gzGzoHsz'
  , appKey: 'eHC7wDWLqSYmEGt5nkIcIMUh'

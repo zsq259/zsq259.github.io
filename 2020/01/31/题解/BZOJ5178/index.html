@@ -8,7 +8,124 @@
 @font-face {
  font-family: 'JetBrains Mono';
  src: local('JetBrains Mono'), url('/font/JetBrainsMono-Regular.woff2') format('woff2');
-}</style><meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="Hastin" type="application/atom+xml">
+}</style><meta name="generator" content="Hexo 4.2.0"><style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"] > svg a {
+  fill: blue;
+  stroke: blue;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style><link rel="alternate" href="/atom.xml" title="Hastin" type="application/atom+xml">
 </head><body><header><nav><a href="/">home</a><a href="/about/">about</a><a href="/tags/">tags</a><a href="/categories/">categories</a><a href="/top/">top</a><a href="/archives/">archives</a><a href="/links/">友链</a></nav></header><main style="flex-direction: row-reverse"><article><div id="post-bg"><div id="post-title"><div id="post-info"><span>date:<time datetime="2020-01-30T16:00:00.000Z" id="date"> 2020-01-31</time></span><br><span>updated:<time datetime="2020-01-31T12:45:32.000Z" id="updated"> 2020-01-31</time></span></div><h1>题解 JSOI2011 棒棒糖</h1><hr></div><div id="post-content"><h2 id="题解-JSOI2011-棒棒糖"><a href="#题解-JSOI2011-棒棒糖" class="headerlink" title="题解 JSOI2011 棒棒糖"></a>题解 JSOI2011 棒棒糖</h2><h3 id="题面"><a href="#题面" class="headerlink" title="题面"></a>题面</h3><p><a href="https://www.lydsy.com/JudgeOnline/problem.php?id=5178" target="_blank" rel="noopener">BZOJ</a></p>
 <a id="more"></a>
 <h3 id="个人体会"><a href="#个人体会" class="headerlink" title="个人体会"></a>个人体会</h3><p>自己切的一道题!</p>
@@ -19,17 +136,17 @@
 <p>看到好多写主席树的,但想先用莫队试一下.</p>
 <p>结果就过了…</p>
 <p>用set套pair,每次找到最大值与区间长度/2比一下就行了…</p>
-<h3 id="code"><a href="#code" class="headerlink" title="code"></a>code</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;set&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> mp make_pair</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> ll long long</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> filein(a) freopen(a<span class="meta-string">".cpp"</span>,<span class="meta-string">"r"</span>,stdin)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> fileout(a) freopen(a<span class="meta-string">".cpp"</span>,<span class="meta-string">"w"</span>,stdout);</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">read</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> sum=<span class="number">0</span>,f=<span class="number">1</span>;<span class="keyword">char</span> c=getchar();</span><br><span class="line">	<span class="keyword">while</span>((c&lt;<span class="string">'0'</span>||c&gt;<span class="string">'9'</span>)&amp;&amp;c!=EOF)&#123;<span class="keyword">if</span>(c==<span class="string">'-'</span>) f=<span class="number">-1</span>;c=getchar();&#125;</span><br><span class="line">	<span class="keyword">while</span>(c&gt;=<span class="string">'0'</span>&amp;&amp;c&lt;=<span class="string">'9'</span>&amp;&amp;c!=EOF)&#123;sum=sum*<span class="number">10</span>+c-<span class="string">'0'</span>;c=getchar();&#125;</span><br><span class="line">	<span class="keyword">return</span> sum*f;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N=<span class="number">100005</span>;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">ques</span>&#123;</span><span class="keyword">int</span> l,r,id;&#125;q[N];</span><br><span class="line"><span class="keyword">int</span> n,m,a[N],c[N];</span><br><span class="line"><span class="keyword">int</span> gap,bl[N],ans[N];</span><br><span class="line"><span class="built_in">multiset</span>&lt;pair&lt;<span class="keyword">int</span>,<span class="keyword">int</span>&gt; &gt; s;</span><br><span class="line"><span class="built_in">multiset</span>&lt;pair&lt;<span class="keyword">int</span>,<span class="keyword">int</span>&gt; &gt;::iterator it;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">bool</span> <span class="title">cmp</span><span class="params">(ques a,ques b)</span></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> bl[a.l]==bl[b.l]? a.r&lt;b.r:a.l&lt;b.l;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> x)</span></span>&#123;</span><br><span class="line">	it=s.find(mp(c[a[x]],a[x]));</span><br><span class="line">	<span class="keyword">if</span>(it!=s.end()) s.erase(it);</span><br><span class="line">	c[a[x]]++;</span><br><span class="line">	s.insert(mp(c[a[x]],a[x]));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">del</span><span class="params">(<span class="keyword">int</span> x)</span></span>&#123;</span><br><span class="line">	it=s.find(mp(c[a[x]],a[x]));</span><br><span class="line">	<span class="keyword">if</span>(it!=s.end()) s.erase(it);</span><br><span class="line">	c[a[x]]--;</span><br><span class="line">	s.insert(mp(c[a[x]],a[x]));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	n=read();m=read();</span><br><span class="line">	gap=<span class="built_in">sqrt</span>(n);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) bl[i]=(i<span class="number">-1</span>)/gap+<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) a[i]=read();</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=m;i++) q[i].l=read(),q[i].r=read();</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=m;i++) q[i].id=i;</span><br><span class="line">	sort(q+<span class="number">1</span>,q+m+<span class="number">1</span>,cmp);</span><br><span class="line">	<span class="keyword">int</span> ql=<span class="number">1</span>,qr=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=m;i++)&#123;</span><br><span class="line">		<span class="keyword">int</span> l=q[i].l,r=q[i].r;</span><br><span class="line">		<span class="keyword">while</span>(ql&lt;l) del(ql++);</span><br><span class="line">		<span class="keyword">while</span>(ql&gt;l) add(--ql);</span><br><span class="line">		<span class="keyword">while</span>(qr&lt;r) add(++qr);</span><br><span class="line">		<span class="keyword">while</span>(qr&gt;r) del(qr--);</span><br><span class="line">		it=s.end();it--;</span><br><span class="line">		pair&lt;<span class="keyword">int</span>,<span class="keyword">int</span>&gt; op=*it;</span><br><span class="line">		ans[q[i].id]=op.first&gt;((r-l+<span class="number">1</span>)/<span class="number">2</span>)? op.second:<span class="number">0</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=m;i++) <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,ans[i]);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="code"><a href="#code" class="headerlink" title="code"></a>code</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;iostream&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;cstring&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;set&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;algorithm&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;cmath&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> mp make_pair</span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> ll long long</span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> filein(a) freopen(a<span class="hljs-meta-string">".cpp"</span>,<span class="hljs-meta-string">"r"</span>,stdin)</span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> fileout(a) freopen(a<span class="hljs-meta-string">".cpp"</span>,<span class="hljs-meta-string">"w"</span>,stdout);</span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;<br><br><span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">int</span> <span class="hljs-title">read</span><span class="hljs-params">()</span></span>{<br>	<span class="hljs-keyword">int</span> sum=<span class="hljs-number">0</span>,f=<span class="hljs-number">1</span>;<span class="hljs-keyword">char</span> c=getchar();<br>	<span class="hljs-keyword">while</span>((c&lt;<span class="hljs-string">'0'</span>||c&gt;<span class="hljs-string">'9'</span>)&amp;&amp;c!=EOF){<span class="hljs-keyword">if</span>(c==<span class="hljs-string">'-'</span>) f=<span class="hljs-number">-1</span>;c=getchar();}<br>	<span class="hljs-keyword">while</span>(c&gt;=<span class="hljs-string">'0'</span>&amp;&amp;c&lt;=<span class="hljs-string">'9'</span>&amp;&amp;c!=EOF){sum=sum*<span class="hljs-number">10</span>+c-<span class="hljs-string">'0'</span>;c=getchar();}<br>	<span class="hljs-keyword">return</span> sum*f;<br>}<br><br><span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> N=<span class="hljs-number">100005</span>;<br><span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">ques</span>{</span><span class="hljs-keyword">int</span> l,r,id;}q[N];<br><span class="hljs-keyword">int</span> n,m,a[N],c[N];<br><span class="hljs-keyword">int</span> gap,bl[N],ans[N];<br><span class="hljs-built_in">multiset</span>&lt;pair&lt;<span class="hljs-keyword">int</span>,<span class="hljs-keyword">int</span>&gt; &gt; s;<br><span class="hljs-built_in">multiset</span>&lt;pair&lt;<span class="hljs-keyword">int</span>,<span class="hljs-keyword">int</span>&gt; &gt;::iterator it;<br><br><span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">bool</span> <span class="hljs-title">cmp</span><span class="hljs-params">(ques a,ques b)</span></span>{<br>	<span class="hljs-keyword">return</span> bl[a.l]==bl[b.l]? a.r&lt;b.r:a.l&lt;b.l;<br>}<br><br><span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">add</span><span class="hljs-params">(<span class="hljs-keyword">int</span> x)</span></span>{<br>	it=s.find(mp(c[a[x]],a[x]));<br>	<span class="hljs-keyword">if</span>(it!=s.end()) s.erase(it);<br>	c[a[x]]++;<br>	s.insert(mp(c[a[x]],a[x]));<br>}<br><br><span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> <span class="hljs-title">del</span><span class="hljs-params">(<span class="hljs-keyword">int</span> x)</span></span>{<br>	it=s.find(mp(c[a[x]],a[x]));<br>	<span class="hljs-keyword">if</span>(it!=s.end()) s.erase(it);<br>	c[a[x]]--;<br>	s.insert(mp(c[a[x]],a[x]));<br>}<br><br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>{<br>	n=read();m=read();<br>	gap=<span class="hljs-built_in">sqrt</span>(n);<br>	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">1</span>;i&lt;=n;i++) bl[i]=(i<span class="hljs-number">-1</span>)/gap+<span class="hljs-number">1</span>;<br>	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">1</span>;i&lt;=n;i++) a[i]=read();<br>	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">1</span>;i&lt;=m;i++) q[i].l=read(),q[i].r=read();<br>	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">1</span>;i&lt;=m;i++) q[i].id=i;<br>	sort(q+<span class="hljs-number">1</span>,q+m+<span class="hljs-number">1</span>,cmp);<br>	<span class="hljs-keyword">int</span> ql=<span class="hljs-number">1</span>,qr=<span class="hljs-number">0</span>;<br>	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">1</span>;i&lt;=m;i++){<br>		<span class="hljs-keyword">int</span> l=q[i].l,r=q[i].r;<br>		<span class="hljs-keyword">while</span>(ql&lt;l) del(ql++);<br>		<span class="hljs-keyword">while</span>(ql&gt;l) add(--ql);<br>		<span class="hljs-keyword">while</span>(qr&lt;r) add(++qr);<br>		<span class="hljs-keyword">while</span>(qr&gt;r) del(qr--);<br>		it=s.end();it--;<br>		pair&lt;<span class="hljs-keyword">int</span>,<span class="hljs-keyword">int</span>&gt; op=*it;<br>		ans[q[i].id]=op.first&gt;((r-l+<span class="hljs-number">1</span>)/<span class="hljs-number">2</span>)? op.second:<span class="hljs-number">0</span>;<br>	}<br>	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">1</span>;i&lt;=m;i++) <span class="hljs-built_in">printf</span>(<span class="hljs-string">"%d\n"</span>,ans[i]);<br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>}<br></code></pre></td></tr></table></figure>
 <div style="font-size:12px;border-bottom: #ddd 1px solid; BORDER-LEFT: #ddd 1px solid; BACKGROUND: #f6f6f6; HEIGHT: 120px; BORDER-TOP: #ddd 1px solid; BORDER-RIGHT: #ddd 1px solid">
 <div style="MARGIN-TOP: 10px; FLOAT: left; MARGIN-LEFT: 5px; MARGIN-RIGHT: 10px">
-<IMG alt="" src="https://avatars1.githubusercontent.com/u/168751?v=3&s=140" width=90 height=100>
+
 </div>
 <div style="LINE-HEIGHT: 200%; MARGIN-TOP: 10px; COLOR: #000000">
-本文链接：<a href="<%= post.link %>"><%= post.title %></a> <br/>
+本文链接：<a href="<%= post.link %>">&lt;%= post.title %&gt;</a> <br>
 作者： 
-<a href="http://zsq259.github.io/" target="_blank" rel="noopener">Hastin</a> <br/>出处： 
+<a href="http://zsq259.github.io/" target="_blank" rel="noopener">Hastin</a> <br>出处： 
 <a href="http://zsq259.github.io/" target="_blank" rel="noopener">http://zsq259.github.io/</a>
-<br/>本文基于<a target="_blank" title="Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" href="http://creativecommons.org/licenses/by-sa/4.0/"> 知识共享署名-相同方式共享 4.0 </a>
+<br>本文基于<a target="_blank" title="Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" href="http://creativecommons.org/licenses/by-sa/4.0/"> 知识共享署名-相同方式共享 4.0 </a>
 国际许可协议发布，欢迎转载，演绎或用于商业目的，但是必须保留本文的署名 
 <a href="http://zsq259.github.io/" target="_blank" rel="noopener">Hastin</a>及链接。
 </div>
